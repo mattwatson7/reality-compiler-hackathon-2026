@@ -2,6 +2,9 @@
 
 **Describe what should happen. Show what happened. Prove whether they match.**
 
+[Watch the 2:26 demo](https://www.youtube.com/watch?v=H0gd17Sj3N8)
+— generated input, actual captured Meta evidence, and local procedure revisions.
+
 Reality Compiler compiles written physical procedures into typed requirements and
 checks them against timestamped visual evidence. A deterministic evaluator explains
 **PASS, FAIL or UNKNOWN**. Compatible revisions reuse preserved observations while
