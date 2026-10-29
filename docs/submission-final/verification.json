@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-28",
+  "base_commit": "31c9d9fcf9406d073df379ffa2da1f21b138a851",
+  "backend": {
+    "passed": 357,
+    "warnings": [
+      "Existing Starlette/httpx TestClient deprecation"
+    ],
+    "seconds": 316.79
+  },
+  "frontend": {
+    "passed": 23
+  },
+  "lint_typing_build_lock": "passed",
+  "mypy_source_files": 34,
+  "npm_vulnerabilities": 0,
+  "offline_replay": {
+    "response_hashes_verified": 17,
+    "new_network_calls": 0
+  },
+  "clean_source_browser": {
+    "run": "810791da4469464eab8fdd6d8424a3e3",
+    "original": "PASS",
+    "revisions": [
+      {
+        "verdict": "FAIL",
+        "compiler": "local_rules",
+        "inference_usage": [],
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "verdict": "UNKNOWN",
+        "compiler": "local_rules",
+        "inference_usage": [],
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      }
+    ],
+    "history": [
+      {
+        "id": "810791da4469464eab8fdd6d8424a3e3",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "id": "af0f7714178c4c83a45311e89b91629d",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "id": "479315f2a23947a89561bc50a21c16ff",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "id": "32c3d0c48d014f598ec7e5424dee2eb4",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "id": "8e4b0848b7a940139dcd03e68baf72cb",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      },
+      {
+        "id": "1919bb2ac8054d53b984ccbd3fa74405",
+        "fingerprint": "263f87ee5c12962a88a5912631e85e84bb219b61c99fe088f3f2afe384d760f2"
+      }
+    ],
+    "playback": true,
+    "reload_history": true,
+    "history_verified_after_process_restart": true
+  },
+  "extended_loopback_smoke": {
+    "frontend": "served",
+    "fixtures": {
+      "correct": "PASS",
+      "incorrect": "FAIL"
+    },
+    "source_mapping": "verified",
+    "unsupported_upload": "UNKNOWN"
+  },
+  "local_docker": "unavailable: Docker Desktop Linux engine pipe absent",
+  "hosted_final_ci": "See final PR head checks and final handoff for exact SHA/run after push",
+  "cost": {
+    "reservations": 63,
+    "paid_enabled": false,
+    "smoke_approved": false,
+    "new_paid_requests": 0
+  },
+  "portal": {
+    "authenticated_form_inspected": true,
+    "required_public_repository_field": true,
+    "demo_field_label": "3-Minute Demo Video",
+    "no_maxlength_declared": true,
+    "server_limits": "unverified",
+    "terms_accepted": false,
+    "submitted": false
+  },
+  "controlled_recordings": "No controlled originals present",
+  "independent_review": {
+    "status": "one production guard gap fixed",
+    "guard": "source-inspection run must be completed generated local_cv with exact generated source hash and empty usage"
+  },
+  "video": {
+    "sha256": "d83ed0ade7c63427dff898d297a5e86465d8265ce0c2a8c8b75ac8e139a69e5b",
+    "bytes": 9419425,
+    "browser_duration_s": 145.621,
+    "full_decode": "passed",
+    "all_chapter_samples_inspected": true,
+    "browser_playback_and_seek": "passed"
+  }
+}

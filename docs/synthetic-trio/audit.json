@@ -1,0 +1,2042 @@
+{
+  "provenance": "SYNTHETIC_NOT_GENUINE_CAMERA",
+  "real_world_validation": "unverified",
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "meta_network_calls": 0,
+  "existing_ledger_unchanged": true,
+  "evaluated_on": "2026-10-29",
+  "timezone": "Asia/Bangkok",
+  "generator_commit": "36d409578de2b5becc77559561e561f168695294",
+  "checks": {
+    "opencv_full_decode": true,
+    "ffmpeg_xerror_full_decode": true,
+    "source_timing_inventory_and_pts": true,
+    "sample_indices_and_times": true,
+    "decisive_evidence_ids_and_saved_frame_routes": true
+  },
+  "cases": {
+    "correct": {
+      "source": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "codec": 875967080,
+        "decoded_frames": 450,
+        "duration_s": 15.0,
+        "sha256": "5fee335e6aeb176677021a455120df7f0de80020ab6833c05141a82452f0659e",
+        "fourcc": "h264",
+        "ffmpeg_full_decode": "passed"
+      },
+      "job_id": "77f765f1b0f34f9c9e657fe8b41c9581",
+      "graph": {
+        "version": "2.0",
+        "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+        "compilation_source": "local_rules",
+        "objects": [
+          {
+            "id": "object1",
+            "label": "blue block",
+            "description": "The procedure's blue block.",
+            "grounding_prompt": "Identify the blue block."
+          },
+          {
+            "id": "object2",
+            "label": "cup",
+            "description": "The procedure's cup.",
+            "grounding_prompt": "Identify the cup."
+          }
+        ],
+        "regions": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "region1",
+            "description": "Visible image region for marked; a transition does not prove physical containment.",
+            "grounding_prompt": "Locate the visible image region for marked.",
+            "coordinate_semantics": "visible_image_region"
+          }
+        ],
+        "events": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event1",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object1",
+              "region_id": "region1"
+            },
+            "required": true
+          },
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event2",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object2",
+              "region_id": "region1"
+            },
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "operator": "BEFORE",
+            "first": "event1",
+            "second": "event2",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            }
+          }
+        ],
+        "conditions": []
+      },
+      "normalized": {
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "frame_count": 360,
+        "duration_s": 15.0,
+        "last_frame_s": 14.958333333333334,
+        "sha256": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c",
+        "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0",
+        "source_sha256": "5fee335e6aeb176677021a455120df7f0de80020ab6833c05141a82452f0659e",
+        "normalized_sha256": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c",
+        "transformation": "ffmpeg autorotation, fit 1280x720, 24 fps, no audio",
+        "source_timing_summary": {
+          "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+          "filter_chain": "showinfo@source=checksum=0,setpts=PTS-STARTPTS,trim=start=0,setpts=PTS-STARTPTS,fps=fps=24:round=near:eof_action=round,scale=w=1280:h=720:force_original_aspect_ratio=decrease:force_divisible_by=2",
+          "method": "ffmpeg_decoder_frame_metadata",
+          "normalized_sha256": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c",
+          "normalized_time_base": "1/24",
+          "parent_source_note": "Mapping refers only to exact upload bytes; prior edits are unknown.",
+          "parent_source_offset_s": null,
+          "segment_duration_s": null,
+          "segment_start_s": 0,
+          "source_sha256": "5fee335e6aeb176677021a455120df7f0de80020ab6833c05141a82452f0659e",
+          "source_start_time_s": 0.0,
+          "source_time_base": "1/15360",
+          "version": "1.0",
+          "source_frame_count": 450,
+          "normalized_frame_count": 360,
+          "first_mapping": {
+            "normalized_index": 0,
+            "normalized_time_s": 0.0,
+            "source_index": 0,
+            "source_pts": 0,
+            "source_time_s": 0.0
+          },
+          "last_mapping": {
+            "normalized_index": 359,
+            "normalized_time_s": 14.958333333333334,
+            "source_index": 449,
+            "source_pts": 229888,
+            "source_time_s": 14.966666666666667
+          },
+          "evidence_frame_mappings": [
+            {
+              "normalized_index": 96,
+              "normalized_time_s": 4.0,
+              "source_index": 120,
+              "source_pts": 61440,
+              "source_time_s": 4.0
+            },
+            {
+              "normalized_index": 98,
+              "normalized_time_s": 4.083333333333333,
+              "source_index": 123,
+              "source_pts": 62976,
+              "source_time_s": 4.1
+            },
+            {
+              "normalized_index": 100,
+              "normalized_time_s": 4.166666666666667,
+              "source_index": 125,
+              "source_pts": 64000,
+              "source_time_s": 4.166666666666667
+            },
+            {
+              "normalized_index": 102,
+              "normalized_time_s": 4.25,
+              "source_index": 128,
+              "source_pts": 65536,
+              "source_time_s": 4.266666666666667
+            },
+            {
+              "normalized_index": 104,
+              "normalized_time_s": 4.333333333333333,
+              "source_index": 130,
+              "source_pts": 66560,
+              "source_time_s": 4.333333333333333
+            },
+            {
+              "normalized_index": 106,
+              "normalized_time_s": 4.416666666666667,
+              "source_index": 133,
+              "source_pts": 68096,
+              "source_time_s": 4.433333333333334
+            },
+            {
+              "normalized_index": 108,
+              "normalized_time_s": 4.5,
+              "source_index": 135,
+              "source_pts": 69120,
+              "source_time_s": 4.5
+            },
+            {
+              "normalized_index": 110,
+              "normalized_time_s": 4.583333333333333,
+              "source_index": 138,
+              "source_pts": 70656,
+              "source_time_s": 4.6
+            },
+            {
+              "normalized_index": 112,
+              "normalized_time_s": 4.666666666666667,
+              "source_index": 140,
+              "source_pts": 71680,
+              "source_time_s": 4.666666666666667
+            },
+            {
+              "normalized_index": 212,
+              "normalized_time_s": 8.833333333333334,
+              "source_index": 265,
+              "source_pts": 135680,
+              "source_time_s": 8.833333333333334
+            },
+            {
+              "normalized_index": 214,
+              "normalized_time_s": 8.916666666666666,
+              "source_index": 268,
+              "source_pts": 137216,
+              "source_time_s": 8.933333333333334
+            },
+            {
+              "normalized_index": 216,
+              "normalized_time_s": 9.0,
+              "source_index": 270,
+              "source_pts": 138240,
+              "source_time_s": 9.0
+            },
+            {
+              "normalized_index": 218,
+              "normalized_time_s": 9.083333333333334,
+              "source_index": 273,
+              "source_pts": 139776,
+              "source_time_s": 9.1
+            },
+            {
+              "normalized_index": 220,
+              "normalized_time_s": 9.166666666666666,
+              "source_index": 275,
+              "source_pts": 140800,
+              "source_time_s": 9.166666666666666
+            },
+            {
+              "normalized_index": 222,
+              "normalized_time_s": 9.25,
+              "source_index": 278,
+              "source_pts": 142336,
+              "source_time_s": 9.266666666666667
+            },
+            {
+              "normalized_index": 224,
+              "normalized_time_s": 9.333333333333334,
+              "source_index": 280,
+              "source_pts": 143360,
+              "source_time_s": 9.333333333333334
+            },
+            {
+              "normalized_index": 226,
+              "normalized_time_s": 9.416666666666666,
+              "source_index": 283,
+              "source_pts": 144896,
+              "source_time_s": 9.433333333333334
+            }
+          ]
+        }
+      },
+      "initialization": {
+        "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "result": {
+        "verdict": "PASS",
+        "reason": "All required predicates and temporal constraints are supported.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object1_region1_50_54_0"
+            ],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object2_region1_108_111_0"
+            ],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "PASS",
+            "reason": "Required order proven by disjoint predicate intervals.",
+            "evidence_ids": [
+              "cv_object1_region1_50_54_0",
+              "cv_object2_region1_108_111_0"
+            ],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": [
+          {
+            "start_s": 4.0,
+            "end_s": 4.666666666666667,
+            "id": "cv_object1_region1_50_54_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              96,
+              98,
+              100,
+              102,
+              104,
+              106,
+              108,
+              110,
+              112
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          {
+            "start_s": 8.833333333333334,
+            "end_s": 9.416666666666666,
+            "id": "cv_object2_region1_108_111_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              212,
+              214,
+              216,
+              218,
+              220,
+              222,
+              224,
+              226
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          }
+        ]
+      },
+      "observations": [
+        {
+          "start_s": 4.166666666666667,
+          "end_s": 4.5,
+          "occurrence_id": "cv_object1_region1_50_54_0",
+          "event_id": "event1",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object1",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9639553061376197,
+          "evidence": {
+            "start_s": 4.0,
+            "end_s": 4.666666666666667,
+            "id": "cv_object1_region1_50_54_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              96,
+              98,
+              100,
+              102,
+              104,
+              106,
+              108,
+              110,
+              112
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          "frame_indices": [
+            96,
+            98,
+            100,
+            102,
+            104,
+            106,
+            108,
+            110,
+            112
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9639553061376197
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 9.25,
+          "occurrence_id": "cv_object2_region1_108_111_0",
+          "event_id": "event2",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object2",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9523900213248898,
+          "evidence": {
+            "start_s": 8.833333333333334,
+            "end_s": 9.416666666666666,
+            "id": "cv_object2_region1_108_111_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              212,
+              214,
+              216,
+              218,
+              220,
+              222,
+              224,
+              226
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          "frame_indices": [
+            212,
+            214,
+            216,
+            218,
+            220,
+            222,
+            224,
+            226
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9523900213248898
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        }
+      ],
+      "tracks": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 181
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.140625,
+              "y": 0.28888888888888886,
+              "width": 0.0875,
+              "height": 0.13055555555555556
+            },
+            "contour": [
+              [
+                0.140625,
+                0.28888888888888886
+              ],
+              [
+                0.140625,
+                0.39861111111111114
+              ],
+              [
+                0.15,
+                0.41805555555555557
+              ],
+              [
+                0.22734375,
+                0.41805555555555557
+              ],
+              [
+                0.22421875,
+                0.3055555555555556
+              ],
+              [
+                0.21875,
+                0.3
+              ],
+              [
+                0.21484375,
+                0.28888888888888886
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 1.0,
+              "shape_solidity": 0.9915448124937829,
+              "appearance_agreement": 0.988471416237719,
+              "displacement_consistency": 0.9920323091359871,
+              "static_background": 1.0
+            },
+            "confidence": 0.988471416237719,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": {
+              "x": 0.6203125,
+              "y": 0.3194444444444444,
+              "width": 0.0890625,
+              "height": 0.13055555555555556
+            },
+            "contour": [
+              [
+                0.6203125,
+                0.3194444444444444
+              ],
+              [
+                0.621875,
+                0.43472222222222223
+              ],
+              [
+                0.63125,
+                0.4486111111111111
+              ],
+              [
+                0.70859375,
+                0.4486111111111111
+              ],
+              [
+                0.70546875,
+                0.33611111111111114
+              ],
+              [
+                0.69453125,
+                0.3194444444444444
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9987229862475443,
+              "shape_solidity": 0.9854843487706132,
+              "appearance_agreement": 0.987556210434403,
+              "displacement_consistency": 1.0,
+              "static_background": 0.9997477304540969
+            },
+            "confidence": 0.9854843487706132,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 1.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.9639553061376197,
+          "diagnostics": [],
+          "invalid_intervals": []
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 181
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.1390625,
+              "y": 0.6361111111111111,
+              "width": 0.08203125,
+              "height": 0.12638888888888888
+            },
+            "contour": [
+              [
+                0.20703125,
+                0.65
+              ],
+              [
+                0.2015625,
+                0.65
+              ],
+              [
+                0.19609375,
+                0.6361111111111111
+              ],
+              [
+                0.19140625,
+                0.6416666666666667
+              ],
+              [
+                0.16875,
+                0.6388888888888888
+              ],
+              [
+                0.1515625,
+                0.65
+              ],
+              [
+                0.15,
+                0.6597222222222222
+              ],
+              [
+                0.14375,
+                0.6666666666666666
+              ],
+              [
+                0.1390625,
+                0.6833333333333333
+              ],
+              [
+                0.1390625,
+                0.7125
+              ],
+              [
+                0.1453125,
+                0.7347222222222223
+              ],
+              [
+                0.15625,
+                0.7513888888888889
+              ],
+              [
+                0.175,
+                0.7611111111111111
+              ],
+              [
+                0.19609375,
+                0.7569444444444444
+              ],
+              [
+                0.2078125,
+                0.7458333333333333
+              ],
+              [
+                0.2171875,
+                0.7263888888888889
+              ],
+              [
+                0.2203125,
+                0.7097222222222223
+              ],
+              [
+                0.2203125,
+                0.6916666666666667
+              ],
+              [
+                0.21640625,
+                0.6722222222222223
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9902194025905366,
+              "shape_solidity": 0.9690537591747669,
+              "appearance_agreement": 0.985884202408495,
+              "displacement_consistency": 0.993728336156879,
+              "static_background": 1.0
+            },
+            "confidence": 0.9690537591747669,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": {
+              "x": 0.759375,
+              "y": 0.5583333333333333,
+              "width": 0.0828125,
+              "height": 0.12361111111111112
+            },
+            "contour": [
+              [
+                0.7703125,
+                0.5722222222222222
+              ],
+              [
+                0.771875,
+                0.5763888888888888
+              ],
+              [
+                0.765625,
+                0.5805555555555556
+              ],
+              [
+                0.765625,
+                0.5875
+              ],
+              [
+                0.759375,
+                0.6027777777777777
+              ],
+              [
+                0.759375,
+                0.6319444444444444
+              ],
+              [
+                0.7625,
+                0.6472222222222223
+              ],
+              [
+                0.7765625,
+                0.6708333333333333
+              ],
+              [
+                0.78671875,
+                0.6791666666666667
+              ],
+              [
+                0.81015625,
+                0.6791666666666667
+              ],
+              [
+                0.8203125,
+                0.6736111111111112
+              ],
+              [
+                0.83671875,
+                0.6486111111111111
+              ],
+              [
+                0.84140625,
+                0.6111111111111112
+              ],
+              [
+                0.8359375,
+                0.5888888888888889
+              ],
+              [
+                0.82265625,
+                0.5638888888888889
+              ],
+              [
+                0.815625,
+                0.5638888888888889
+              ],
+              [
+                0.81015625,
+                0.5583333333333333
+              ],
+              [
+                0.790625,
+                0.5583333333333333
+              ],
+              [
+                0.7734375,
+                0.5694444444444444
+              ],
+              [
+                0.77265625,
+                0.575
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9886333597673804,
+              "shape_solidity": 0.9733989492584957,
+              "appearance_agreement": 0.9868374925727867,
+              "displacement_consistency": 1.0,
+              "static_background": 0.9997477304540969
+            },
+            "confidence": 0.9733989492584957,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 1.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.9523900213248898,
+          "diagnostics": [],
+          "invalid_intervals": []
+        }
+      ],
+      "local_job_json_sha256": "4f941eea56fc09bfec6b9c7e8d9ea13bdc0be493e7132af0fcd291284595d2c6"
+    },
+    "reverse": {
+      "source": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "codec": 875967080,
+        "decoded_frames": 450,
+        "duration_s": 15.0,
+        "sha256": "25b380402d4ebca89f783a6e7ddea4e0269484175f8e088cd0af5d58e30e0ddd",
+        "fourcc": "h264",
+        "ffmpeg_full_decode": "passed"
+      },
+      "job_id": "ff717b78344b49bd962705649c74cf0c",
+      "graph": {
+        "version": "2.0",
+        "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+        "compilation_source": "local_rules",
+        "objects": [
+          {
+            "id": "object1",
+            "label": "blue block",
+            "description": "The procedure's blue block.",
+            "grounding_prompt": "Identify the blue block."
+          },
+          {
+            "id": "object2",
+            "label": "cup",
+            "description": "The procedure's cup.",
+            "grounding_prompt": "Identify the cup."
+          }
+        ],
+        "regions": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "region1",
+            "description": "Visible image region for marked; a transition does not prove physical containment.",
+            "grounding_prompt": "Locate the visible image region for marked.",
+            "coordinate_semantics": "visible_image_region"
+          }
+        ],
+        "events": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event1",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object1",
+              "region_id": "region1"
+            },
+            "required": true
+          },
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event2",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object2",
+              "region_id": "region1"
+            },
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "operator": "BEFORE",
+            "first": "event1",
+            "second": "event2",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            }
+          }
+        ],
+        "conditions": []
+      },
+      "normalized": {
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "frame_count": 360,
+        "duration_s": 15.0,
+        "last_frame_s": 14.958333333333334,
+        "sha256": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d",
+        "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0",
+        "source_sha256": "25b380402d4ebca89f783a6e7ddea4e0269484175f8e088cd0af5d58e30e0ddd",
+        "normalized_sha256": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d",
+        "transformation": "ffmpeg autorotation, fit 1280x720, 24 fps, no audio",
+        "source_timing_summary": {
+          "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+          "filter_chain": "showinfo@source=checksum=0,setpts=PTS-STARTPTS,trim=start=0,setpts=PTS-STARTPTS,fps=fps=24:round=near:eof_action=round,scale=w=1280:h=720:force_original_aspect_ratio=decrease:force_divisible_by=2",
+          "method": "ffmpeg_decoder_frame_metadata",
+          "normalized_sha256": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d",
+          "normalized_time_base": "1/24",
+          "parent_source_note": "Mapping refers only to exact upload bytes; prior edits are unknown.",
+          "parent_source_offset_s": null,
+          "segment_duration_s": null,
+          "segment_start_s": 0,
+          "source_sha256": "25b380402d4ebca89f783a6e7ddea4e0269484175f8e088cd0af5d58e30e0ddd",
+          "source_start_time_s": 0.0,
+          "source_time_base": "1/15360",
+          "version": "1.0",
+          "source_frame_count": 450,
+          "normalized_frame_count": 360,
+          "first_mapping": {
+            "normalized_index": 0,
+            "normalized_time_s": 0.0,
+            "source_index": 0,
+            "source_pts": 0,
+            "source_time_s": 0.0
+          },
+          "last_mapping": {
+            "normalized_index": 359,
+            "normalized_time_s": 14.958333333333334,
+            "source_index": 449,
+            "source_pts": 229888,
+            "source_time_s": 14.966666666666667
+          },
+          "evidence_frame_mappings": [
+            {
+              "normalized_index": 92,
+              "normalized_time_s": 3.8333333333333335,
+              "source_index": 115,
+              "source_pts": 58880,
+              "source_time_s": 3.8333333333333335
+            },
+            {
+              "normalized_index": 94,
+              "normalized_time_s": 3.9166666666666665,
+              "source_index": 118,
+              "source_pts": 60416,
+              "source_time_s": 3.933333333333333
+            },
+            {
+              "normalized_index": 96,
+              "normalized_time_s": 4.0,
+              "source_index": 120,
+              "source_pts": 61440,
+              "source_time_s": 4.0
+            },
+            {
+              "normalized_index": 98,
+              "normalized_time_s": 4.083333333333333,
+              "source_index": 123,
+              "source_pts": 62976,
+              "source_time_s": 4.1
+            },
+            {
+              "normalized_index": 100,
+              "normalized_time_s": 4.166666666666667,
+              "source_index": 125,
+              "source_pts": 64000,
+              "source_time_s": 4.166666666666667
+            },
+            {
+              "normalized_index": 102,
+              "normalized_time_s": 4.25,
+              "source_index": 128,
+              "source_pts": 65536,
+              "source_time_s": 4.266666666666667
+            },
+            {
+              "normalized_index": 104,
+              "normalized_time_s": 4.333333333333333,
+              "source_index": 130,
+              "source_pts": 66560,
+              "source_time_s": 4.333333333333333
+            },
+            {
+              "normalized_index": 106,
+              "normalized_time_s": 4.416666666666667,
+              "source_index": 133,
+              "source_pts": 68096,
+              "source_time_s": 4.433333333333334
+            },
+            {
+              "normalized_index": 216,
+              "normalized_time_s": 9.0,
+              "source_index": 270,
+              "source_pts": 138240,
+              "source_time_s": 9.0
+            },
+            {
+              "normalized_index": 218,
+              "normalized_time_s": 9.083333333333334,
+              "source_index": 273,
+              "source_pts": 139776,
+              "source_time_s": 9.1
+            },
+            {
+              "normalized_index": 220,
+              "normalized_time_s": 9.166666666666666,
+              "source_index": 275,
+              "source_pts": 140800,
+              "source_time_s": 9.166666666666666
+            },
+            {
+              "normalized_index": 222,
+              "normalized_time_s": 9.25,
+              "source_index": 278,
+              "source_pts": 142336,
+              "source_time_s": 9.266666666666667
+            },
+            {
+              "normalized_index": 224,
+              "normalized_time_s": 9.333333333333334,
+              "source_index": 280,
+              "source_pts": 143360,
+              "source_time_s": 9.333333333333334
+            },
+            {
+              "normalized_index": 226,
+              "normalized_time_s": 9.416666666666666,
+              "source_index": 283,
+              "source_pts": 144896,
+              "source_time_s": 9.433333333333334
+            },
+            {
+              "normalized_index": 228,
+              "normalized_time_s": 9.5,
+              "source_index": 285,
+              "source_pts": 145920,
+              "source_time_s": 9.5
+            },
+            {
+              "normalized_index": 230,
+              "normalized_time_s": 9.583333333333334,
+              "source_index": 288,
+              "source_pts": 147456,
+              "source_time_s": 9.6
+            },
+            {
+              "normalized_index": 232,
+              "normalized_time_s": 9.666666666666666,
+              "source_index": 290,
+              "source_pts": 148480,
+              "source_time_s": 9.666666666666666
+            }
+          ]
+        }
+      },
+      "initialization": {
+        "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "result": {
+        "verdict": "FAIL",
+        "reason": "Positive evidence contradicts at least one required requirement.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object1_region1_110_114_0"
+            ],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object2_region1_48_51_0"
+            ],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "FAIL",
+            "reason": "Evidence proves the reverse of the required order.",
+            "evidence_ids": [
+              "cv_object1_region1_110_114_0",
+              "cv_object2_region1_48_51_0"
+            ],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": [
+          {
+            "start_s": 9.0,
+            "end_s": 9.666666666666666,
+            "id": "cv_object1_region1_110_114_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              216,
+              218,
+              220,
+              222,
+              224,
+              226,
+              228,
+              230,
+              232
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          {
+            "start_s": 3.8333333333333335,
+            "end_s": 4.416666666666667,
+            "id": "cv_object2_region1_48_51_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              92,
+              94,
+              96,
+              98,
+              100,
+              102,
+              104,
+              106
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          }
+        ]
+      },
+      "observations": [
+        {
+          "start_s": 9.166666666666666,
+          "end_s": 9.5,
+          "occurrence_id": "cv_object1_region1_110_114_0",
+          "event_id": "event1",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object1",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9639553061376197,
+          "evidence": {
+            "start_s": 9.0,
+            "end_s": 9.666666666666666,
+            "id": "cv_object1_region1_110_114_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              216,
+              218,
+              220,
+              222,
+              224,
+              226,
+              228,
+              230,
+              232
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          "frame_indices": [
+            216,
+            218,
+            220,
+            222,
+            224,
+            226,
+            228,
+            230,
+            232
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9639553061376197
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 4.25,
+          "occurrence_id": "cv_object2_region1_48_51_0",
+          "event_id": "event2",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object2",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9527969299459149,
+          "evidence": {
+            "start_s": 3.8333333333333335,
+            "end_s": 4.416666666666667,
+            "id": "cv_object2_region1_48_51_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              92,
+              94,
+              96,
+              98,
+              100,
+              102,
+              104,
+              106
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          "frame_indices": [
+            92,
+            94,
+            96,
+            98,
+            100,
+            102,
+            104,
+            106
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9527969299459149
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        }
+      ],
+      "tracks": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 181
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.140625,
+              "y": 0.28888888888888886,
+              "width": 0.0875,
+              "height": 0.13055555555555556
+            },
+            "contour": [
+              [
+                0.140625,
+                0.28888888888888886
+              ],
+              [
+                0.140625,
+                0.39861111111111114
+              ],
+              [
+                0.15,
+                0.41805555555555557
+              ],
+              [
+                0.22734375,
+                0.41805555555555557
+              ],
+              [
+                0.22421875,
+                0.3055555555555556
+              ],
+              [
+                0.21875,
+                0.3
+              ],
+              [
+                0.21484375,
+                0.28888888888888886
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 1.0,
+              "shape_solidity": 0.9915448124937829,
+              "appearance_agreement": 0.988471416237719,
+              "displacement_consistency": 0.9920323091359871,
+              "static_background": 1.0
+            },
+            "confidence": 0.988471416237719,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": {
+              "x": 0.6203125,
+              "y": 0.31666666666666665,
+              "width": 0.0890625,
+              "height": 0.13333333333333333
+            },
+            "contour": [
+              [
+                0.6203125,
+                0.32222222222222224
+              ],
+              [
+                0.6203125,
+                0.42083333333333334
+              ],
+              [
+                0.6234375,
+                0.4375
+              ],
+              [
+                0.63125,
+                0.4486111111111111
+              ],
+              [
+                0.70859375,
+                0.4486111111111111
+              ],
+              [
+                0.70546875,
+                0.33611111111111114
+              ],
+              [
+                0.7015625,
+                0.3333333333333333
+              ],
+              [
+                0.69609375,
+                0.3194444444444444
+              ],
+              [
+                0.6625,
+                0.31666666666666665
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9919992194360426,
+              "shape_solidity": 0.9750558089876735,
+              "appearance_agreement": 0.9879565486063681,
+              "displacement_consistency": 1.0,
+              "static_background": 0.9998392252770724
+            },
+            "confidence": 0.9750558089876735,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 1.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.9566240120436582,
+          "diagnostics": [],
+          "invalid_intervals": []
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 181
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.1390625,
+              "y": 0.6361111111111111,
+              "width": 0.08203125,
+              "height": 0.12638888888888888
+            },
+            "contour": [
+              [
+                0.20703125,
+                0.65
+              ],
+              [
+                0.2015625,
+                0.65
+              ],
+              [
+                0.19609375,
+                0.6361111111111111
+              ],
+              [
+                0.19140625,
+                0.6416666666666667
+              ],
+              [
+                0.16875,
+                0.6388888888888888
+              ],
+              [
+                0.1515625,
+                0.65
+              ],
+              [
+                0.15,
+                0.6597222222222222
+              ],
+              [
+                0.14375,
+                0.6666666666666666
+              ],
+              [
+                0.1390625,
+                0.6833333333333333
+              ],
+              [
+                0.1390625,
+                0.7125
+              ],
+              [
+                0.1453125,
+                0.7347222222222223
+              ],
+              [
+                0.15625,
+                0.7513888888888889
+              ],
+              [
+                0.175,
+                0.7611111111111111
+              ],
+              [
+                0.19609375,
+                0.7569444444444444
+              ],
+              [
+                0.2078125,
+                0.7458333333333333
+              ],
+              [
+                0.2171875,
+                0.7263888888888889
+              ],
+              [
+                0.2203125,
+                0.7097222222222223
+              ],
+              [
+                0.2203125,
+                0.6916666666666667
+              ],
+              [
+                0.21640625,
+                0.6722222222222223
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9902194025905366,
+              "shape_solidity": 0.9690537591747669,
+              "appearance_agreement": 0.985884202408495,
+              "displacement_consistency": 0.993728336156879,
+              "static_background": 1.0
+            },
+            "confidence": 0.9690537591747669,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": {
+              "x": 0.759375,
+              "y": 0.5583333333333333,
+              "width": 0.0828125,
+              "height": 0.12361111111111112
+            },
+            "contour": [
+              [
+                0.775,
+                0.5666666666666667
+              ],
+              [
+                0.775,
+                0.5708333333333333
+              ],
+              [
+                0.7671875,
+                0.5805555555555556
+              ],
+              [
+                0.759375,
+                0.6055555555555555
+              ],
+              [
+                0.7609375,
+                0.6402777777777777
+              ],
+              [
+                0.771875,
+                0.6652777777777777
+              ],
+              [
+                0.7875,
+                0.6791666666666667
+              ],
+              [
+                0.80546875,
+                0.6805555555555556
+              ],
+              [
+                0.82109375,
+                0.6736111111111112
+              ],
+              [
+                0.83671875,
+                0.6486111111111111
+              ],
+              [
+                0.84140625,
+                0.6111111111111112
+              ],
+              [
+                0.83203125,
+                0.5777777777777777
+              ],
+              [
+                0.825,
+                0.5722222222222222
+              ],
+              [
+                0.82421875,
+                0.5666666666666667
+              ],
+              [
+                0.821875,
+                0.5694444444444444
+              ],
+              [
+                0.81796875,
+                0.5611111111111111
+              ],
+              [
+                0.815625,
+                0.5638888888888889
+              ],
+              [
+                0.81015625,
+                0.5583333333333333
+              ],
+              [
+                0.7875,
+                0.5583333333333333
+              ],
+              [
+                0.78046875,
+                0.5666666666666667
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9844039122389638,
+              "shape_solidity": 0.9732077236587159,
+              "appearance_agreement": 0.987437343358396,
+              "displacement_consistency": 1.0,
+              "static_background": 0.9998392252770724
+            },
+            "confidence": 0.9732077236587159,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 1.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.9527969299459149,
+          "diagnostics": [],
+          "invalid_intervals": []
+        }
+      ],
+      "local_job_json_sha256": "d870762d8dcde7fe8bed56fdb0eb2ae83ce0fbbc2c2dd95a23358ffa6b30b6b5"
+    },
+    "occlusion": {
+      "source": {
+        "width": 1280,
+        "height": 720,
+        "fps": 30.0,
+        "codec": 875967080,
+        "decoded_frames": 450,
+        "duration_s": 15.0,
+        "sha256": "ef5cd5556d56b95221f9b330e525c96ad3157c22e9c78897701779ccece33afc",
+        "fourcc": "h264",
+        "ffmpeg_full_decode": "passed"
+      },
+      "job_id": "b4ab8f585cca46b2ad089a3eb50a595c",
+      "graph": {
+        "version": "2.0",
+        "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+        "compilation_source": "local_rules",
+        "objects": [
+          {
+            "id": "object1",
+            "label": "blue block",
+            "description": "The procedure's blue block.",
+            "grounding_prompt": "Identify the blue block."
+          },
+          {
+            "id": "object2",
+            "label": "cup",
+            "description": "The procedure's cup.",
+            "grounding_prompt": "Identify the cup."
+          }
+        ],
+        "regions": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "region1",
+            "description": "Visible image region for marked; a transition does not prove physical containment.",
+            "grounding_prompt": "Locate the visible image region for marked.",
+            "coordinate_semantics": "visible_image_region"
+          }
+        ],
+        "events": [
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event1",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object1",
+              "region_id": "region1"
+            },
+            "required": true
+          },
+          {
+            "observability": "SUPPORTED",
+            "reason": null,
+            "id": "event2",
+            "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            },
+            "predicate": {
+              "type": "object_entered_region",
+              "object_id": "object2",
+              "region_id": "region1"
+            },
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "operator": "BEFORE",
+            "first": "event1",
+            "second": "event2",
+            "source": {
+              "start": 0,
+              "end": 90,
+              "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+            }
+          }
+        ],
+        "conditions": []
+      },
+      "normalized": {
+        "width": 1280,
+        "height": 720,
+        "fps": 24.0,
+        "frame_count": 360,
+        "duration_s": 15.0,
+        "last_frame_s": 14.958333333333334,
+        "sha256": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc",
+        "frame_reference": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc:0",
+        "source_sha256": "ef5cd5556d56b95221f9b330e525c96ad3157c22e9c78897701779ccece33afc",
+        "normalized_sha256": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc",
+        "transformation": "ffmpeg autorotation, fit 1280x720, 24 fps, no audio",
+        "source_timing_summary": {
+          "ffmpeg_version": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers",
+          "filter_chain": "showinfo@source=checksum=0,setpts=PTS-STARTPTS,trim=start=0,setpts=PTS-STARTPTS,fps=fps=24:round=near:eof_action=round,scale=w=1280:h=720:force_original_aspect_ratio=decrease:force_divisible_by=2",
+          "method": "ffmpeg_decoder_frame_metadata",
+          "normalized_sha256": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc",
+          "normalized_time_base": "1/24",
+          "parent_source_note": "Mapping refers only to exact upload bytes; prior edits are unknown.",
+          "parent_source_offset_s": null,
+          "segment_duration_s": null,
+          "segment_start_s": 0,
+          "source_sha256": "ef5cd5556d56b95221f9b330e525c96ad3157c22e9c78897701779ccece33afc",
+          "source_start_time_s": 0.0,
+          "source_time_base": "1/15360",
+          "version": "1.0",
+          "source_frame_count": 450,
+          "normalized_frame_count": 360,
+          "first_mapping": {
+            "normalized_index": 0,
+            "normalized_time_s": 0.0,
+            "source_index": 0,
+            "source_pts": 0,
+            "source_time_s": 0.0
+          },
+          "last_mapping": {
+            "normalized_index": 359,
+            "normalized_time_s": 14.958333333333334,
+            "source_index": 449,
+            "source_pts": 229888,
+            "source_time_s": 14.966666666666667
+          },
+          "evidence_frame_mappings": []
+        }
+      },
+      "initialization": {
+        "frame_reference": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "result": {
+        "verdict": "UNKNOWN",
+        "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "UNKNOWN",
+            "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+            "evidence_ids": [],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "UNKNOWN",
+            "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+            "evidence_ids": [],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "UNKNOWN",
+            "reason": "Required predicate evidence unavailable.",
+            "evidence_ids": [],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": []
+      },
+      "observations": [],
+      "tracks": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 33,
+            "ambiguous": 1,
+            "missing": 147
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.140625,
+              "y": 0.28888888888888886,
+              "width": 0.0875,
+              "height": 0.13055555555555556
+            },
+            "contour": [
+              [
+                0.140625,
+                0.28888888888888886
+              ],
+              [
+                0.140625,
+                0.39861111111111114
+              ],
+              [
+                0.15,
+                0.41805555555555557
+              ],
+              [
+                0.22734375,
+                0.41805555555555557
+              ],
+              [
+                0.22421875,
+                0.3055555555555556
+              ],
+              [
+                0.21875,
+                0.3
+              ],
+              [
+                0.21484375,
+                0.28888888888888886
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 1.0,
+              "shape_solidity": 0.9915448124937829,
+              "appearance_agreement": 0.988471416237719,
+              "displacement_consistency": 0.9920323091359871,
+              "static_background": 1.0
+            },
+            "confidence": 0.988471416237719,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": null,
+            "contour": [],
+            "quality_components": {
+              "static_background": 0.9849778266745445
+            },
+            "confidence": 0.0,
+            "status": "missing",
+            "region_overlap": {},
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.988453930472225,
+          "diagnostics": [
+            "Scene motion invalidates fixed-camera assumptions"
+          ],
+          "invalid_intervals": [
+            {
+              "start_s": 2.75,
+              "end_s": 15.0,
+              "reason": "Scene motion invalidates fixed-camera assumptions"
+            }
+          ]
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 33,
+            "ambiguous": 1,
+            "missing": 147
+          },
+          "first": {
+            "frame_index": 0,
+            "time_s": 0.0,
+            "box": {
+              "x": 0.1390625,
+              "y": 0.6361111111111111,
+              "width": 0.08203125,
+              "height": 0.12638888888888888
+            },
+            "contour": [
+              [
+                0.20703125,
+                0.65
+              ],
+              [
+                0.2015625,
+                0.65
+              ],
+              [
+                0.19609375,
+                0.6361111111111111
+              ],
+              [
+                0.19140625,
+                0.6416666666666667
+              ],
+              [
+                0.16875,
+                0.6388888888888888
+              ],
+              [
+                0.1515625,
+                0.65
+              ],
+              [
+                0.15,
+                0.6597222222222222
+              ],
+              [
+                0.14375,
+                0.6666666666666666
+              ],
+              [
+                0.1390625,
+                0.6833333333333333
+              ],
+              [
+                0.1390625,
+                0.7125
+              ],
+              [
+                0.1453125,
+                0.7347222222222223
+              ],
+              [
+                0.15625,
+                0.7513888888888889
+              ],
+              [
+                0.175,
+                0.7611111111111111
+              ],
+              [
+                0.19609375,
+                0.7569444444444444
+              ],
+              [
+                0.2078125,
+                0.7458333333333333
+              ],
+              [
+                0.2171875,
+                0.7263888888888889
+              ],
+              [
+                0.2203125,
+                0.7097222222222223
+              ],
+              [
+                0.2203125,
+                0.6916666666666667
+              ],
+              [
+                0.21640625,
+                0.6722222222222223
+              ]
+            ],
+            "quality_components": {
+              "area_consistency": 0.9902194025905366,
+              "shape_solidity": 0.9690537591747669,
+              "appearance_agreement": 0.985884202408495,
+              "displacement_consistency": 0.993728336156879,
+              "static_background": 1.0
+            },
+            "confidence": 0.9690537591747669,
+            "status": "reliable",
+            "region_overlap": {
+              "region1": 0.0
+            },
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "last": {
+            "frame_index": 359,
+            "time_s": 14.958333333333334,
+            "box": null,
+            "contour": [],
+            "quality_components": {
+              "static_background": 0.9849778266745445
+            },
+            "confidence": 0.0,
+            "status": "missing",
+            "region_overlap": {},
+            "provenance": "local_cv.fixed_hsv.v1"
+          },
+          "minimum_reliable_quality": 0.9687231369437281,
+          "diagnostics": [
+            "Scene motion invalidates fixed-camera assumptions"
+          ],
+          "invalid_intervals": [
+            {
+              "start_s": 2.75,
+              "end_s": 15.0,
+              "reason": "Scene motion invalidates fixed-camera assumptions"
+            }
+          ]
+        }
+      ],
+      "local_job_json_sha256": "5b35f43e6ebaad1a11c39a409820f3b4eda1f263f4e420c5d7b79b275982ced7"
+    }
+  }
+}

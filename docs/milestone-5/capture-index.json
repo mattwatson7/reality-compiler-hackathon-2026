@@ -1,0 +1,108 @@
+{
+  "responses": [
+    {
+      "file": "responses/response-01.json",
+      "sha256": "c119850461cb875cf6b9f2f79d64007304faefc500dad3dc8b550e79fc23c42e",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:41:52.486221+00:00"
+    },
+    {
+      "file": "responses/response-02.json",
+      "sha256": "9c018ef4710a1970f2f211e79c726789ba754215683c9d96e6ab0be4c2d83193",
+      "model": "sam-3.1",
+      "captured_utc": "2026-10-28T03:42:21.973611+00:00"
+    },
+    {
+      "file": "responses/response-03.json",
+      "sha256": "6f82e2142ae7af1b668c6199434aeb698ae26dc43412a48059bebfdf14e76523",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:43:00.702486+00:00"
+    },
+    {
+      "file": "responses/response-04.json",
+      "sha256": "fe03d74fdbb161324abfc6f656fa2b296f471a87d7bb17d34deb3ce0171f671e",
+      "model": "sam-3.1",
+      "captured_utc": "2026-10-28T03:43:17.968839+00:00"
+    },
+    {
+      "file": "responses/response-05.json",
+      "sha256": "a7240d5213db8f8ab52b258e4b84847a109a24727aad3d6eeb526ff7f9d5c983",
+      "model": "muse-spark-1.3",
+      "captured_utc": "2026-10-28T03:43:43.928159+00:00"
+    },
+    {
+      "file": "responses/response-06.json",
+      "sha256": "ebf5e6ee2a5ad8e2fd0188f27e8f8fbe9c9389e8cfade06a70c87e39e48e3631",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:43:58.608573+00:00"
+    },
+    {
+      "file": "responses/response-07.json",
+      "sha256": "7f3278d7e3f2fdb00371596cbb0ff2f39cc7add06d060cd5bd4e6ebc3c6cde99",
+      "model": "sam-3.1",
+      "captured_utc": "2026-10-28T03:44:21.285335+00:00"
+    },
+    {
+      "file": "responses/response-08.json",
+      "sha256": "4608d64dc89e16c3626d7e726dcc3fa6dc1f138f51ae50f8f64d39b4f3434538",
+      "model": "muse-spark-1.3",
+      "captured_utc": "2026-10-28T03:45:55.329300+00:00"
+    },
+    {
+      "file": "responses/response-09.json",
+      "sha256": "616f0161c55740a672b37dec4f58c00c9cf77b8e0d2bbe5283b8ff02126910f9",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:46:15.486660+00:00"
+    },
+    {
+      "file": "responses/response-10.json",
+      "sha256": "5ea445e7b9d7a6d36e4f1fc828ea2899a4da066afa0c90018949aa5934de2098",
+      "model": "sam-3.1",
+      "captured_utc": "2026-10-28T03:46:40.157484+00:00"
+    },
+    {
+      "file": "responses/response-11.json",
+      "sha256": "7a1580aa231718792c7cf982c30685fd7a722c4ff0bb69d0fef4a9d0664f176d",
+      "model": "muse-spark-1.3",
+      "captured_utc": "2026-10-28T03:48:01.706778+00:00"
+    },
+    {
+      "file": "responses/response-12.json",
+      "sha256": "644420e19a560776c828b53e23dc3b24e6e0364903ec6b4b6e7cc275d1cf118d",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:48:50.972055+00:00"
+    },
+    {
+      "file": "responses/response-13.json",
+      "sha256": "5e59a5d78941beee8b941c621f2e1f9b61a1b3e0f63c14c20795a2c2d76c9348",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:52:32.440004+00:00"
+    },
+    {
+      "file": "responses/response-14.json",
+      "sha256": "9a33f8c69f477d29c05bb514aabaf7071332e9fb6c0236c1486077fd53dbbf58",
+      "model": "sam-3.1",
+      "captured_utc": "2026-10-28T03:55:02.070353+00:00"
+    },
+    {
+      "file": "responses/response-15.json",
+      "sha256": "40b1b8b5bad00c0bad5de2b372c82cad9b12c91e4acf8f1a1a5e70a40e0f916c",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:55:53.535441+00:00"
+    },
+    {
+      "file": "responses/response-16.json",
+      "sha256": "13b89cb1dcb78ac35179835466ba11b13c66988de4019485cdf12eddb0ba06e7",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:58:35.259504+00:00"
+    },
+    {
+      "file": "responses/response-17.json",
+      "sha256": "653fb5b21f7c65983f0a58c457a44b6b37474cf18fb4020bd450bf3c47ee022e",
+      "model": "muse-wonder-1.0",
+      "captured_utc": "2026-10-28T03:59:03.476356+00:00"
+    }
+  ],
+  "new_actual_inference_posts": 17,
+  "synthetic_contract_responses": false
+}

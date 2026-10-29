@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-29",
+  "base": "3fe8cf1",
+  "paid_requests": 0,
+  "controlled_originals": [],
+  "assets": [
+    {
+      "path": "docs\\submission-final\\reality-compiler-demo.mp4",
+      "sha256": "d83ed0ade7c63427dff898d297a5e86465d8265ce0c2a8c8b75ac8e139a69e5b",
+      "matches_manifest": true,
+      "bytes": 9419425
+    },
+    {
+      "path": "docs\\submission-final\\reality-compiler-source.zip",
+      "sha256": "037de8061b98c5dc211e016725446581fd2c10a66f1481dd1f07fd1244c83dec",
+      "matches_manifest": true,
+      "bytes": 4806794
+    }
+  ],
+  "runtime_hash_mismatches": [],
+  "zip_crc_error": null,
+  "zip_forbidden_paths": [],
+  "paid_gates": {
+    "enabled": false,
+    "smoke": false
+  },
+  "camera_inventory": [
+    {
+      "path": "recordings\\external\\3_16_peg_eval_continual_success.mp4",
+      "sha256": "21da6950563fa18ef0c1f7d93767c6e241651b38535866d6f66fb58e02a94971",
+      "decoded_frames": 1845,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 576,
+      "duration_s": 61.5,
+      "container": "MP4"
+    },
+    {
+      "path": "recordings\\external\\cam1.mp4",
+      "sha256": "26a4f40bcecbb23bf7f92c5d106ca013155283e9672e94f9efe3807c9f783f56",
+      "decoded_frames": 323,
+      "fps": 30.0,
+      "width": 1280,
+      "height": 720,
+      "duration_s": 10.766666666666667,
+      "container": "MP4"
+    },
+    {
+      "path": "recordings\\external\\real_nonprehensile.mp4",
+      "sha256": "2f0ab52f71f7af787bbcde5040a8611f44415b6ccc3f163ce7077b8df4706b92",
+      "decoded_frames": 638,
+      "fps": 29.97002997002997,
+      "width": 1280,
+      "height": 720,
+      "duration_s": 21.287933333333335,
+      "container": "MP4"
+    },
+    {
+      "path": "recordings\\external\\real_perturb.mp4",
+      "sha256": "efb06c17f2a90394f539f311efcb41d2b3deb4c5e0840c154f35077ba43c5bd9",
+      "decoded_frames": 1228,
+      "fps": 25.0,
+      "width": 1280,
+      "height": 720,
+      "duration_s": 49.12,
+      "container": "MP4"
+    }
+  ]
+}

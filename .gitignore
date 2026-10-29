@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+data/
+*.sqlite*
+playwright-report/
+test-results/
+*.tsbuildinfo
+.test-tmp/
+.pytest-tmp/
+.pytest-*/
+.playwright-cli/
+.uv-cache/
+output/
+# Private source media and predeclared camera annotations require rights review.
+recordings/
+# Finished submission media/bundles stay local until separately approved for upload.
+docs/submission-final/*.mp4
+docs/submission-final/*.zip

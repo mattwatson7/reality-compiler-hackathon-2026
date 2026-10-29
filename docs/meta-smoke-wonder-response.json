@@ -1,0 +1,34 @@
+{
+  "id": "chatcmpl-01a17ddd-9ed2-729a-bc0f-a123cef402ea",
+  "object": "chat.completion",
+  "model": "muse-wonder-1.0",
+  "usage": {
+    "completion_tokens": 2570,
+    "prompt_tokens": 121,
+    "total_tokens": 2691,
+    "completion_tokens_details": {
+      "reasoning_tokens": 1804
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "response_fields": [
+    "choices",
+    "created",
+    "id",
+    "model",
+    "object",
+    "usage"
+  ],
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\n  \"compilation_source\": \"muse\",\n  \"conditions\": [],\n  \"constraints\": [\n    {\n      \"first\": \"s1\",\n      \"id\": \"t1\",\n      \"operator\": \"BEFORE\",\n      \"second\": \"s2\",\n      \"source\": {\n        \"end\": 65,\n        \"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n        \"start\": 0\n      }\n    }\n  ],\n  \"events\": [\n    {\n      \"id\": \"s1\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"UNSUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"o1\",\n        \"region_id\": \"r1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": \"No video, clip, stills, frames, logs, or observation records were provided, so visibility and execution are unsupported.\",\n      \"required\": true,\n      \"source\": {\n        \"end\": 51,\n        \"quote\": \"Move the blue block into the visible marked region\",\n        \"start\": 0\n      }\n    },\n    {\n      \"id\": \"s2\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"UNSUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"o2\",\n        \"region_id\": \"r1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": \"No video, clip, stills, frames, logs, or observation records were provided, so visibility and execution are unsupported.\",\n      \"required\": true,\n      \"source\": {\n        \"end\": 65,\n        \"quote\": \"moving the cup into that region\",\n        \"start\": 59\n      }\n    },\n    {\n      \"id\": \"s3\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"UNSUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"o1\",\n        \"region_id\": \"r1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": \"Final-state persistence is part of the required check but unsupported by observation because no visual evidence was provided.\",\n      \"required\": true,\n      \"source\": {\n        \"end\": 51,\n        \"quote\": \"Move the blue block into the visible marked region\",\n        \"start\": 0\n      }\n    }\n  ],\n  \"objects\": [\n    {\n      \"description\": \"the blue block\",\n      \"grounding_prompt\": \"the blue block\",\n      \"id\": \"o1\",\n      \"label\": \"blue block\"\n    },\n    {\n      \"description\": \"the cup\",\n      \"grounding_prompt\": \"the cup\",\n      \"id\": \"o2\",\n      \"label\": \"cup\"\n    }\n  ],\n  \"procedure\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n  \"regions\": [\n    {\n      \"coordinate_semantics\": \"visible_image_region\",\n      \"description\": \"the visible marked region\",\n      \"grounding_prompt\": \"the visible marked region\",\n      \"id\": \"r1\",\n      \"observability\": \"UNSUPPORTED\",\n      \"reason\": \"No video, clip, stills, frames, logs, or observation records were provided to delineate the visible geometry.\"\n    }\n  ],\n  \"version\": \"2.0\"\n}"
+      }
+    }
+  ]
+}

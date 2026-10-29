@@ -1,0 +1,27 @@
+{
+  "authorization_id": "meta-sam-only-m41-2026-10-28",
+  "authorization_status": "pending_human_approval",
+  "video_sha256": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401",
+  "graph_sha256": "92eb3e93b10ab228cba33703a90656c1bd849f10304bf6429f6e8167d1019815",
+  "selections_sha256": "929d5a24a6d9bf21b36f6cb0f47f82f7d7009641b63a5192007e43133fadcf23",
+  "media": {
+    "width": 320,
+    "height": 180,
+    "fps": 24.0,
+    "frame_count": 72,
+    "duration_s": 3.0,
+    "last_frame_s": 2.9583333333333335,
+    "sha256": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401",
+    "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+  },
+  "maximum_reservation_microusd": 14400,
+  "model": "sam-3.1",
+  "inference_requests": 1,
+  "wonder_requests": 0,
+  "spark_requests": 0,
+  "retries": 0,
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "pricing_checked_date": "2026-10-28",
+  "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits"
+}

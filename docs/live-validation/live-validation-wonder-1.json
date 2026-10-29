@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-10-27T18:23:05.435575+00:00",
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "error": "Invalid, refused or incomplete semantic response",
+  "status": "rejected",
+  "responses": [
+    {
+      "id": "chatcmpl-01a17e9a-6600-7133-bdc3-8ac71e811da3",
+      "object": "chat.completion",
+      "model": "muse-wonder-1.0",
+      "usage": {
+        "completion_tokens": 4096,
+        "prompt_tokens": 346,
+        "total_tokens": 4442,
+        "completion_tokens_details": {
+          "reasoning_tokens": 3574
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "response_fields": [
+        "choices",
+        "created",
+        "id",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "length",
+          "message": {
+            "role": "assistant",
+            "content": "{\n  \"compilation_source\": \"muse\",\n  \"conditions\": [\n    {\n      \"id\": \"condition1\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"SUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"object1\",\n        \"region_id\": \"region1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": null,\n      \"required\": true,\n      \"scope\": \"during\",\n      \"source\": {\n        \"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n        \"source_id\": \"clause1\"\n      }\n    },\n    {\n      \"id\": \"condition2\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"SUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"object2\",\n        \"region_id\": \"region1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": null,\n      \"required\": true,\n      \"scope\": \"during\",\n      \"source\": {\n        \"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n        \"source_id\": \"clause1\"\n      }\n    }\n  ],\n  \"constraints\": [\n    {\n      \"first\": \"event1\",\n      \"id\": \"constraint1\",\n      \"operator\": \"BEFORE\",\n      \"second\": \"event2\",\n      \"source\": {\n        \"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n        \"source_id\": \"clause1\"\n      }\n    }\n  ],\n  \"events\": [\n    {\n      \"id\": \"event1\",\n      \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n      \"observability\": \"SUPPORTED\",\n      \"predicate\": {\n        \"object_id\": \"object1\",\n        \"region_id\": \"region1\",\n        \"type\": \"object_entered_region\"\n      },\n      \"reason\": null,\n      \"required\": true,\n      \"source\": {\n        \"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\",\n        \"source_id\": \"clause1\"\n      }\n    },\n    {\n      \"id\": \"event"
+          }
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "model": "muse-wonder-1.0",
+      "usage_verified": false
+    }
+  ],
+  "finished_at": "2026-10-27T18:23:30.387030+00:00"
+}

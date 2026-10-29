@@ -1,0 +1,27 @@
+{
+  "provenance": "SYNTHETIC_NOT_GENUINE_CAMERA",
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "files": {
+    "correct.mp4": {
+      "sha256": "5fee335e6aeb176677021a455120df7f0de80020ab6833c05141a82452f0659e",
+      "bytes": 62266,
+      "duration_s": 15.0,
+      "expected_verdict": "PASS",
+      "full_decode": "passed"
+    },
+    "reverse.mp4": {
+      "sha256": "25b380402d4ebca89f783a6e7ddea4e0269484175f8e088cd0af5d58e30e0ddd",
+      "bytes": 61367,
+      "duration_s": 15.0,
+      "expected_verdict": "FAIL",
+      "full_decode": "passed"
+    },
+    "occlusion.mp4": {
+      "sha256": "ef5cd5556d56b95221f9b330e525c96ad3157c22e9c78897701779ccece33afc",
+      "bytes": 69122,
+      "duration_s": 15.0,
+      "expected_verdict": "UNKNOWN",
+      "full_decode": "passed"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-27T13:28:44.085557+00:00",
+  "endpoint": "GET https://api.meta.ai/v1/models",
+  "inference_requests": 0,
+  "credential_present": true,
+  "authenticated": true,
+  "models": [
+    "sam-3.1",
+    "muse-wonder-1.0",
+    "muse-spark-1.3"
+  ]
+}

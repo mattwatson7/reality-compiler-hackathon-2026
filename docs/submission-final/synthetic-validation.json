@@ -1,0 +1,2020 @@
+{
+  "date": "2026-10-29",
+  "upload_method": "real loopback HTTP API; browser file upload blocked by extension local-file permission",
+  "cases": {
+    "correct": {
+      "job_id": "58bf647dbc704480bfa4ef12991df285",
+      "url": "http://127.0.0.1:8010/?run=58bf647dbc704480bfa4ef12991df285",
+      "verdict": "PASS",
+      "source_sha256": "5fee335e6aeb176677021a455120df7f0de80020ab6833c05141a82452f0659e",
+      "result": {
+        "verdict": "PASS",
+        "reason": "All required predicates and temporal constraints are supported.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object1_region1_50_54_0"
+            ],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object2_region1_108_111_0"
+            ],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "PASS",
+            "reason": "Required order proven by disjoint predicate intervals.",
+            "evidence_ids": [
+              "cv_object1_region1_50_54_0",
+              "cv_object2_region1_108_111_0"
+            ],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": [
+          {
+            "start_s": 4.0,
+            "end_s": 4.666666666666667,
+            "id": "cv_object1_region1_50_54_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              96,
+              98,
+              100,
+              102,
+              104,
+              106,
+              108,
+              110,
+              112
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          {
+            "start_s": 8.833333333333334,
+            "end_s": 9.416666666666666,
+            "id": "cv_object2_region1_108_111_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              212,
+              214,
+              216,
+              218,
+              220,
+              222,
+              224,
+              226
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          }
+        ]
+      },
+      "initialization": {
+        "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "original_job_unchanged": true,
+      "original_evaluation_unchanged": true,
+      "evaluations": [
+        {
+          "id": "58bf647dbc704480bfa4ef12991df285",
+          "job_id": "58bf647dbc704480bfa4ef12991df285",
+          "created_at": 1793286640.2075224,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "PASS",
+            "reason": "All required predicates and temporal constraints are supported.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "PASS",
+                "reason": "Required order proven by disjoint predicate intervals.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0",
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": [
+              {
+                "start_s": 4.0,
+                "end_s": 4.666666666666667,
+                "id": "cv_object1_region1_50_54_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106,
+                  108,
+                  110,
+                  112
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              },
+              {
+                "start_s": 8.833333333333334,
+                "end_s": 9.416666666666666,
+                "id": "cv_object2_region1_108_111_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  212,
+                  214,
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              }
+            ]
+          },
+          "reuse_status": "original",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "25a7ca2e313922f130c99be6de6616b4a3eb43482400eda15e7f947d049e22b1",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        },
+        {
+          "id": "c5719f515a3b4e6ba172c484ea224ff7",
+          "job_id": "58bf647dbc704480bfa4ef12991df285",
+          "created_at": 1793286722.3487666,
+          "procedure": "Move the cup into the visible marked region before moving the blue block into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the cup into the visible marked region before moving the blue block into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              },
+              {
+                "id": "object2",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the cup into the visible marked region before moving the blue block into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the cup into the visible marked region before moving the blue block into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the cup into the visible marked region before moving the blue block into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the cup into the visible marked region before moving the blue block into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the cup into the visible marked region before moving the blue block into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "FAIL",
+            "reason": "Positive evidence contradicts at least one required requirement.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "FAIL",
+                "reason": "Evidence proves the reverse of the required order.",
+                "evidence_ids": [
+                  "cv_object2_region1_108_111_0",
+                  "cv_object1_region1_50_54_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": [
+              {
+                "start_s": 8.833333333333334,
+                "end_s": 9.416666666666666,
+                "id": "cv_object2_region1_108_111_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  212,
+                  214,
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              },
+              {
+                "start_s": 4.0,
+                "end_s": 4.666666666666667,
+                "id": "cv_object1_region1_50_54_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106,
+                  108,
+                  110,
+                  112
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              }
+            ]
+          },
+          "reuse_status": "reused",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "25a7ca2e313922f130c99be6de6616b4a3eb43482400eda15e7f947d049e22b1",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        },
+        {
+          "id": "e38cf313c0834de7bf1f980e1af6a0c4",
+          "job_id": "58bf647dbc704480bfa4ef12991df285",
+          "created_at": 1793286769.7560556,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region. Ensure the cup is sterile.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region. Ensure the cup is sterile.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": [
+              {
+                "observability": "UNSUPPORTED",
+                "reason": "Outside the controlled visual grammar; all text and qualifiers are retained. Hidden properties and implicit physical containment cannot be verified.",
+                "id": "condition1",
+                "instruction": "Ensure the cup is sterile.",
+                "source": {
+                  "start": 91,
+                  "end": 117,
+                  "quote": "Ensure the cup is sterile."
+                },
+                "predicate": null,
+                "required": true,
+                "scope": "during"
+              }
+            ]
+          },
+          "result": {
+            "verdict": "UNKNOWN",
+            "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "PASS",
+                "reason": "Required order proven by disjoint predicate intervals.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0",
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [
+              {
+                "id": "condition1",
+                "verdict": "UNKNOWN",
+                "reason": "Outside the controlled visual grammar; all text and qualifiers are retained. Hidden properties and implicit physical containment cannot be verified.",
+                "evidence_ids": [],
+                "required": true
+              }
+            ],
+            "evidence": [
+              {
+                "start_s": 4.0,
+                "end_s": 4.666666666666667,
+                "id": "cv_object1_region1_50_54_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106,
+                  108,
+                  110,
+                  112
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              },
+              {
+                "start_s": 8.833333333333334,
+                "end_s": 9.416666666666666,
+                "id": "cv_object2_region1_108_111_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  212,
+                  214,
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              }
+            ]
+          },
+          "reuse_status": "reused",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "25a7ca2e313922f130c99be6de6616b4a3eb43482400eda15e7f947d049e22b1",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        },
+        {
+          "id": "534759ea90b34365a029a980940bf3f2",
+          "job_id": "58bf647dbc704480bfa4ef12991df285",
+          "created_at": 1793287486.4364367,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "PASS",
+            "reason": "All required predicates and temporal constraints are supported.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "PASS",
+                "reason": "Required order proven by disjoint predicate intervals.",
+                "evidence_ids": [
+                  "cv_object1_region1_50_54_0",
+                  "cv_object2_region1_108_111_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": [
+              {
+                "start_s": 4.0,
+                "end_s": 4.666666666666667,
+                "id": "cv_object1_region1_50_54_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106,
+                  108,
+                  110,
+                  112
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              },
+              {
+                "start_s": 8.833333333333334,
+                "end_s": 9.416666666666666,
+                "id": "cv_object2_region1_108_111_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  212,
+                  214,
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226
+                ],
+                "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+              }
+            ]
+          },
+          "reuse_status": "reused",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "25a7ca2e313922f130c99be6de6616b4a3eb43482400eda15e7f947d049e22b1",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        }
+      ],
+      "tracking": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 181
+          },
+          "invalid_intervals": [],
+          "diagnostics": []
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 181
+          },
+          "invalid_intervals": [],
+          "diagnostics": []
+        }
+      ],
+      "observations": [
+        {
+          "start_s": 4.166666666666667,
+          "end_s": 4.5,
+          "occurrence_id": "cv_object1_region1_50_54_0",
+          "event_id": "event1",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object1",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9639553061376197,
+          "evidence": {
+            "start_s": 4.0,
+            "end_s": 4.666666666666667,
+            "id": "cv_object1_region1_50_54_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              96,
+              98,
+              100,
+              102,
+              104,
+              106,
+              108,
+              110,
+              112
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          "frame_indices": [
+            96,
+            98,
+            100,
+            102,
+            104,
+            106,
+            108,
+            110,
+            112
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9639553061376197
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        },
+        {
+          "start_s": 9.0,
+          "end_s": 9.25,
+          "occurrence_id": "cv_object2_region1_108_111_0",
+          "event_id": "event2",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object2",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9523900213248898,
+          "evidence": {
+            "start_s": 8.833333333333334,
+            "end_s": 9.416666666666666,
+            "id": "cv_object2_region1_108_111_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              212,
+              214,
+              216,
+              218,
+              220,
+              222,
+              224,
+              226
+            ],
+            "frame_reference": "a971279a55db7392681ed813f3f14134178786f061d1cce55489c5f59a84453c:0"
+          },
+          "frame_indices": [
+            212,
+            214,
+            216,
+            218,
+            220,
+            222,
+            224,
+            226
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9523900213248898
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        }
+      ],
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "source_checks": [
+        {
+          "mapping": {
+            "normalized_index": 96,
+            "normalized_time_s": 4.0,
+            "source_index": 120,
+            "source_pts": 61440,
+            "source_time_s": 4.0
+          },
+          "png_sha256": "fbf06bf722ff5c543a07817f9a841dafa2b7c72a9407cd0949a7a05ae2e89cdf"
+        }
+      ]
+    },
+    "reverse": {
+      "job_id": "34816b94b71a4273947d44a7a12a3132",
+      "url": "http://127.0.0.1:8010/?run=34816b94b71a4273947d44a7a12a3132",
+      "verdict": "FAIL",
+      "source_sha256": "25b380402d4ebca89f783a6e7ddea4e0269484175f8e088cd0af5d58e30e0ddd",
+      "result": {
+        "verdict": "FAIL",
+        "reason": "Positive evidence contradicts at least one required requirement.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object1_region1_110_114_0"
+            ],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "PASS",
+            "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+            "evidence_ids": [
+              "cv_object2_region1_48_51_0"
+            ],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "FAIL",
+            "reason": "Evidence proves the reverse of the required order.",
+            "evidence_ids": [
+              "cv_object1_region1_110_114_0",
+              "cv_object2_region1_48_51_0"
+            ],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": [
+          {
+            "start_s": 9.0,
+            "end_s": 9.666666666666666,
+            "id": "cv_object1_region1_110_114_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              216,
+              218,
+              220,
+              222,
+              224,
+              226,
+              228,
+              230,
+              232
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          {
+            "start_s": 3.8333333333333335,
+            "end_s": 4.416666666666667,
+            "id": "cv_object2_region1_48_51_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              92,
+              94,
+              96,
+              98,
+              100,
+              102,
+              104,
+              106
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          }
+        ]
+      },
+      "initialization": {
+        "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "original_job_unchanged": true,
+      "original_evaluation_unchanged": true,
+      "evaluations": [
+        {
+          "id": "34816b94b71a4273947d44a7a12a3132",
+          "job_id": "34816b94b71a4273947d44a7a12a3132",
+          "created_at": 1793286651.2945268,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "FAIL",
+            "reason": "Positive evidence contradicts at least one required requirement.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_110_114_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_48_51_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "FAIL",
+                "reason": "Evidence proves the reverse of the required order.",
+                "evidence_ids": [
+                  "cv_object1_region1_110_114_0",
+                  "cv_object2_region1_48_51_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": [
+              {
+                "start_s": 9.0,
+                "end_s": 9.666666666666666,
+                "id": "cv_object1_region1_110_114_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226,
+                  228,
+                  230,
+                  232
+                ],
+                "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+              },
+              {
+                "start_s": 3.8333333333333335,
+                "end_s": 4.416666666666667,
+                "id": "cv_object2_region1_48_51_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  92,
+                  94,
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106
+                ],
+                "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+              }
+            ]
+          },
+          "reuse_status": "original",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "db4d61645b9f363a8ce0047e8e72854d40618b20889521eb9eb2b2fb0cf1e0c2",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        },
+        {
+          "id": "513630f7b4294eab9a7651486c3f84f2",
+          "job_id": "34816b94b71a4273947d44a7a12a3132",
+          "created_at": 1793287402.8054864,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "FAIL",
+            "reason": "Positive evidence contradicts at least one required requirement.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object1_region1_110_114_0"
+                ],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "PASS",
+                "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+                "evidence_ids": [
+                  "cv_object2_region1_48_51_0"
+                ],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "FAIL",
+                "reason": "Evidence proves the reverse of the required order.",
+                "evidence_ids": [
+                  "cv_object1_region1_110_114_0",
+                  "cv_object2_region1_48_51_0"
+                ],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": [
+              {
+                "start_s": 9.0,
+                "end_s": 9.666666666666666,
+                "id": "cv_object1_region1_110_114_0",
+                "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  216,
+                  218,
+                  220,
+                  222,
+                  224,
+                  226,
+                  228,
+                  230,
+                  232
+                ],
+                "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+              },
+              {
+                "start_s": 3.8333333333333335,
+                "end_s": 4.416666666666667,
+                "id": "cv_object2_region1_48_51_0",
+                "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+                "source": "local_cv",
+                "model_id": null,
+                "frame_indices": [
+                  92,
+                  94,
+                  96,
+                  98,
+                  100,
+                  102,
+                  104,
+                  106
+                ],
+                "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+              }
+            ]
+          },
+          "reuse_status": "reused",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "db4d61645b9f363a8ce0047e8e72854d40618b20889521eb9eb2b2fb0cf1e0c2",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        }
+      ],
+      "tracking": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 181
+          },
+          "invalid_intervals": [],
+          "diagnostics": []
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 181
+          },
+          "invalid_intervals": [],
+          "diagnostics": []
+        }
+      ],
+      "observations": [
+        {
+          "start_s": 9.166666666666666,
+          "end_s": 9.5,
+          "occurrence_id": "cv_object1_region1_110_114_0",
+          "event_id": "event1",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object1",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9639553061376197,
+          "evidence": {
+            "start_s": 9.0,
+            "end_s": 9.666666666666666,
+            "id": "cv_object1_region1_110_114_0",
+            "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              216,
+              218,
+              220,
+              222,
+              224,
+              226,
+              228,
+              230,
+              232
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          "frame_indices": [
+            216,
+            218,
+            220,
+            222,
+            224,
+            226,
+            228,
+            230,
+            232
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9639553061376197
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        },
+        {
+          "start_s": 4.0,
+          "end_s": 4.25,
+          "occurrence_id": "cv_object2_region1_48_51_0",
+          "event_id": "event2",
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object2",
+            "region_id": "region1"
+          },
+          "polarity": "CONFIRMED",
+          "confidence": 0.9527969299459149,
+          "evidence": {
+            "start_s": 3.8333333333333335,
+            "end_s": 4.416666666666667,
+            "id": "cv_object2_region1_48_51_0",
+            "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+            "source": "local_cv",
+            "model_id": null,
+            "frame_indices": [
+              92,
+              94,
+              96,
+              98,
+              100,
+              102,
+              104,
+              106
+            ],
+            "frame_reference": "ce65e2c90f450a5ccc804a90c06a114f94bfffc77c7a41ac2ba8c34aa9d4503d:0"
+          },
+          "frame_indices": [
+            92,
+            94,
+            96,
+            98,
+            100,
+            102,
+            104,
+            106
+          ],
+          "quality_components": {
+            "minimum_support_quality": 0.9527969299459149
+          },
+          "provenance": "local_cv.fixed_hsv.v1;observer=mask_hysteresis.v1",
+          "usable": true,
+          "model_id": null
+        }
+      ],
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "source_checks": [
+        {
+          "mapping": {
+            "normalized_index": 92,
+            "normalized_time_s": 3.8333333333333335,
+            "source_index": 115,
+            "source_pts": 58880,
+            "source_time_s": 3.8333333333333335
+          },
+          "png_sha256": "6ad17aac071284b511774ca24254a1bbfb406140589be1c84d8c18e577f94f65"
+        },
+        {
+          "mapping": {
+            "normalized_index": 216,
+            "normalized_time_s": 9.0,
+            "source_index": 270,
+            "source_pts": 138240,
+            "source_time_s": 9.0
+          },
+          "png_sha256": "0e87bf740109bad28b34c0d92e90b2eec9ebec2df9884b7b51e33c0702bfdea4"
+        }
+      ]
+    },
+    "occlusion": {
+      "job_id": "54c27b9cf0fa4ddea873d37351166616",
+      "url": "http://127.0.0.1:8010/?run=54c27b9cf0fa4ddea873d37351166616",
+      "verdict": "UNKNOWN",
+      "source_sha256": "ef5cd5556d56b95221f9b330e525c96ad3157c22e9c78897701779ccece33afc",
+      "result": {
+        "verdict": "UNKNOWN",
+        "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+        "steps": [
+          {
+            "id": "event1",
+            "verdict": "UNKNOWN",
+            "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+            "evidence_ids": [],
+            "required": true
+          },
+          {
+            "id": "event2",
+            "verdict": "UNKNOWN",
+            "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+            "evidence_ids": [],
+            "required": true
+          }
+        ],
+        "constraints": [
+          {
+            "id": "constraint1",
+            "verdict": "UNKNOWN",
+            "reason": "Required predicate evidence unavailable.",
+            "evidence_ids": [],
+            "required": true
+          }
+        ],
+        "conditions": [],
+        "evidence": []
+      },
+      "initialization": {
+        "frame_reference": "f827c942cb6bbe504c6d03ec79d240a6d758592cfb1f051549e8f4f48b71a7bc:0",
+        "objects": {
+          "object1": {
+            "x": 0.13671875,
+            "y": 0.28194444444444444,
+            "width": 0.0953125,
+            "height": 0.15
+          },
+          "object2": {
+            "x": 0.134375,
+            "y": 0.6319444444444444,
+            "width": 0.0953125,
+            "height": 0.14583333333333334
+          }
+        },
+        "regions": {
+          "region1": {
+            "x": 0.55,
+            "y": 0.25,
+            "width": 0.35,
+            "height": 0.5
+          }
+        }
+      },
+      "original_job_unchanged": true,
+      "original_evaluation_unchanged": true,
+      "evaluations": [
+        {
+          "id": "54c27b9cf0fa4ddea873d37351166616",
+          "job_id": "54c27b9cf0fa4ddea873d37351166616",
+          "created_at": 1793286662.635007,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "UNKNOWN",
+            "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "UNKNOWN",
+                "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+                "evidence_ids": [],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "UNKNOWN",
+                "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+                "evidence_ids": [],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "UNKNOWN",
+                "reason": "Required predicate evidence unavailable.",
+                "evidence_ids": [],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": []
+          },
+          "reuse_status": "original",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "dee4f79ba87ab89bd504d6da971e25b7700e2514ee311f47acc6f406c9d1e5f0",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        },
+        {
+          "id": "97ef70c011154bb3b329a9f610f25e26",
+          "job_id": "54c27b9cf0fa4ddea873d37351166616",
+          "created_at": 1793287360.5665524,
+          "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "graph": {
+            "version": "2.0",
+            "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+            "compilation_source": "local_rules",
+            "objects": [
+              {
+                "id": "object1",
+                "label": "blue block",
+                "description": "The procedure's blue block.",
+                "grounding_prompt": "Identify the blue block."
+              },
+              {
+                "id": "object2",
+                "label": "cup",
+                "description": "The procedure's cup.",
+                "grounding_prompt": "Identify the cup."
+              }
+            ],
+            "regions": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "region1",
+                "description": "Visible image region for marked; a transition does not prove physical containment.",
+                "grounding_prompt": "Locate the visible image region for marked.",
+                "coordinate_semantics": "visible_image_region"
+              }
+            ],
+            "events": [
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event1",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object1",
+                  "region_id": "region1"
+                },
+                "required": true
+              },
+              {
+                "observability": "SUPPORTED",
+                "reason": null,
+                "id": "event2",
+                "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                },
+                "predicate": {
+                  "type": "object_entered_region",
+                  "object_id": "object2",
+                  "region_id": "region1"
+                },
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "operator": "BEFORE",
+                "first": "event1",
+                "second": "event2",
+                "source": {
+                  "start": 0,
+                  "end": 90,
+                  "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+                }
+              }
+            ],
+            "conditions": []
+          },
+          "result": {
+            "verdict": "UNKNOWN",
+            "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+            "steps": [
+              {
+                "id": "event1",
+                "verdict": "UNKNOWN",
+                "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+                "evidence_ids": [],
+                "required": true
+              },
+              {
+                "id": "event2",
+                "verdict": "UNKNOWN",
+                "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+                "evidence_ids": [],
+                "required": true
+              }
+            ],
+            "constraints": [
+              {
+                "id": "constraint1",
+                "verdict": "UNKNOWN",
+                "reason": "Required predicate evidence unavailable.",
+                "evidence_ids": [],
+                "required": true
+              }
+            ],
+            "conditions": [],
+            "evidence": []
+          },
+          "reuse_status": "reused",
+          "reuse_reasons": [],
+          "evidence_fingerprint": "dee4f79ba87ab89bd504d6da971e25b7700e2514ee311f47acc6f406c9d1e5f0",
+          "provenance": {
+            "compiler": "local_rules",
+            "tracker": "local_cv.fixed_hsv.v1",
+            "observer": "mask_hysteresis.v1"
+          },
+          "inference_usage": []
+        }
+      ],
+      "tracking": [
+        {
+          "object_id": "object1",
+          "statuses": {
+            "reliable": 33,
+            "ambiguous": 1,
+            "missing": 147
+          },
+          "invalid_intervals": [
+            {
+              "start_s": 2.75,
+              "end_s": 15.0,
+              "reason": "Scene motion invalidates fixed-camera assumptions"
+            }
+          ],
+          "diagnostics": [
+            "Scene motion invalidates fixed-camera assumptions"
+          ]
+        },
+        {
+          "object_id": "object2",
+          "statuses": {
+            "reliable": 33,
+            "ambiguous": 1,
+            "missing": 147
+          },
+          "invalid_intervals": [
+            {
+              "start_s": 2.75,
+              "end_s": 15.0,
+              "reason": "Scene motion invalidates fixed-camera assumptions"
+            }
+          ],
+          "diagnostics": [
+            "Scene motion invalidates fixed-camera assumptions"
+          ]
+        }
+      ],
+      "observations": [],
+      "provenance": {
+        "compiler": "local_rules",
+        "tracker": "local_cv.fixed_hsv.v1",
+        "observer": "mask_hysteresis.v1"
+      },
+      "source_checks": [
+        {
+          "mapping": {
+            "normalized_index": 66,
+            "normalized_time_s": 2.75,
+            "source_index": 83,
+            "source_pts": 42496,
+            "source_time_s": 2.7666666666666666
+          },
+          "png_sha256": "b237a2d041fb071f49e5f3d9ca8e828fff219687de97529fca5d2366b7cdc0fc"
+        }
+      ]
+    }
+  },
+  "health": {
+    "status": "ok",
+    "mode": "local_cv",
+    "live_inference": false,
+    "compiler_source": "local_rules",
+    "real_muse_compilation": false,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": false,
+      "models": [],
+      "paid_inference_enabled": false,
+      "sam_selectable": false,
+      "wonder_selectable": false,
+      "spark_selectable": false,
+      "reason": "Paid inference requires explicit approval and both server enable flags"
+    }
+  },
+  "costs_after_browser": {
+    "reservations": 0
+  },
+  "browser_validation": {
+    "upload_and_frame_zero_selection": "BLOCKED: ChatGPT Chrome extension requires Allow access to file URLs; no permission changed. Native fallback lacked input geometry and returned an unrelated foreground screenshot; stopped.",
+    "loaded_real_api_jobs": [
+      "correct",
+      "reverse",
+      "occlusion"
+    ],
+    "reevaluations_through_real_browser": [
+      "correct reversed requirement -> FAIL",
+      "correct unsupported sterility -> UNKNOWN",
+      "correct same procedure -> PASS",
+      "reverse same procedure -> FAIL",
+      "occlusion same procedure -> UNKNOWN"
+    ],
+    "source_frames_inspected": {
+      "correct": [
+        96
+      ],
+      "reverse": [
+        92,
+        216
+      ],
+      "occlusion": [
+        66
+      ]
+    },
+    "reverse_playback": {
+      "duration_s": 15,
+      "observed_time_progression": [
+        3.9185,
+        11.3439
+      ],
+      "paused": false,
+      "error": null
+    },
+    "occlusion_playback": {
+      "duration_s": 15,
+      "observed_time_progression": [
+        3.0202,
+        15
+      ],
+      "error": null
+    },
+    "range_input_note": "Direct fill did not seek; native ArrowRight presses and returned source mapping verified actual seek.",
+    "scope": "API upload and initialization followed by real browser result, timeline, diagnostics, source inspection and revision checks. Full end-to-end browser uploads NOT claimed."
+  },
+  "hosted_ci": {
+    "commit": "cafb74c2485fe1637f9434b43e5b68a50d5de3c3",
+    "url": "https://github.com/mattwatson7/reality-compiler/actions/runs/40874811113",
+    "conclusion": "success",
+    "docker_build": "success",
+    "paid_disabled_container_smoke": "success"
+  }
+}

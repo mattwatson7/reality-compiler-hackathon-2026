@@ -1,0 +1,90 @@
+{
+  "declared_before_inference": true,
+  "coordinate_system": "normalized frame-zero boxes x,y,width,height; named regions are image geometry only",
+  "source_time_mapping": "source seconds = normalized frame index / 24 + segment start, sampling tolerance up to one source-frame interval; no speed changes",
+  "cases": [
+    {
+      "name": "cube",
+      "segment": [
+        0,
+        10.7666666667
+      ],
+      "procedure": "Move the purple block into the visible image region target.",
+      "objects": {
+        "purple block": [
+          0.56,
+          0.61,
+          0.052,
+          0.105
+        ]
+      },
+      "regions": {
+        "target": [
+          0.45,
+          0.44,
+          0.1,
+          0.19
+        ]
+      },
+      "expected": "UNKNOWN",
+      "justification": "Block approaches cup area but robot gripper occludes it; full-run identity cannot be established. Two-dimensional region entry is not containment."
+    },
+    {
+      "name": "peg",
+      "segment": [
+        0,
+        6
+      ],
+      "procedure": "At end, the green box is visible.",
+      "objects": {
+        "green box": [
+          0.361,
+          0.44,
+          0.122,
+          0.22
+        ]
+      },
+      "regions": {},
+      "expected": "PASS or UNKNOWN",
+      "justification": "Green hollow base remains visibly identifiable in representative start/end frames; SAM identity loss, low confidence or partial gripper occlusion must make this UNKNOWN."
+    },
+    {
+      "name": "nonprehensile",
+      "segment": [
+        0,
+        8
+      ],
+      "procedure": "At end, the green box is visible.",
+      "objects": {
+        "green box": [
+          0.452,
+          0.445,
+          0.147,
+          0.217
+        ]
+      },
+      "regions": {},
+      "expected": "PASS or UNKNOWN",
+      "justification": "Visible green base at end of a continuous prefix; same-color peg, occlusion or mask confusion may invalidate identity. No insertion claim."
+    },
+    {
+      "name": "perturb",
+      "segment": [
+        0,
+        8
+      ],
+      "procedure": "At end, the green box is visible.",
+      "objects": {
+        "green box": [
+          0.452,
+          0.445,
+          0.147,
+          0.217
+        ]
+      },
+      "regions": {},
+      "expected": "PASS or UNKNOWN",
+      "justification": "Visible stationary hollow green base; human arm crosses camera and may invalidate continuity. Later source camera cut excluded by segment chosen before inference."
+    }
+  ]
+}

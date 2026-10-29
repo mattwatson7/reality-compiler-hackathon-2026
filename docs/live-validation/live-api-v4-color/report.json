@@ -1,0 +1,237 @@
+{
+  "case": "color",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "started_at": "2026-10-27T18:47:40.339992+00:00",
+  "calls": [
+    {
+      "model": "muse-wonder-1.0",
+      "started_at": "2026-10-27T18:47:42.140640+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:47:46.048888+00:00",
+      "usage": {
+        "completion_tokens": 507,
+        "prompt_tokens": 398,
+        "total_tokens": 905,
+        "completion_tokens_details": {
+          "reasoning_tokens": 179
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "model": "sam-3.1",
+      "started_at": "2026-10-27T18:47:47.061331+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:47:57.160155+00:00",
+      "usage": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 0,
+        "video_frames_processed": 96
+      }
+    },
+    {
+      "model": "muse-spark-1.3",
+      "started_at": "2026-10-27T18:48:04.698394+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:48:12.102905+00:00",
+      "usage": {
+        "completion_tokens": 1293,
+        "prompt_tokens": 11800,
+        "total_tokens": 13093,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1125
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "procedure": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+  "source_sha256": "26eaa4ce9a0564712431d86d15e0810ac90617e6041f25c3be68458b730c3eef",
+  "health": {
+    "status": "ok",
+    "mode": "meta_sam",
+    "live_inference": true,
+    "compiler_source": "muse",
+    "real_muse_compilation": true,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv",
+      "meta_sam"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": true,
+      "models": [
+        "muse-wonder-1.0",
+        "sam-3.1",
+        "muse-spark-1.3-contributor",
+        "muse-voice-transcribe-1.0",
+        "muse-spark-1.3",
+        "muse-image-1.0",
+        "muse-spark-1.2-contributor",
+        "muse-spark-1.2",
+        "muse-spark-1.1"
+      ],
+      "paid_inference_enabled": true,
+      "sam_selectable": true,
+      "wonder_selectable": true,
+      "spark_selectable": true,
+      "reason": "Fresh account catalog verified; paid dispatch is enabled"
+    }
+  },
+  "job_id": "353f635aaa274a1a8e63fd2a7540a757",
+  "status": "completed",
+  "finished_at": "2026-10-27T18:48:12.370599+00:00",
+  "job": {
+    "id": "353f635aaa274a1a8e63fd2a7540a757",
+    "status": "completed",
+    "procedure": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+    "graph": {
+      "version": "2.0",
+      "procedure": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+      "compilation_source": "muse",
+      "objects": [
+        {
+          "id": "object1",
+          "label": "cup",
+          "description": "The procedure's cup.",
+          "grounding_prompt": "Identify the cup."
+        }
+      ],
+      "regions": [],
+      "events": [],
+      "constraints": [],
+      "conditions": [
+        {
+          "observability": "SUPPORTED",
+          "reason": null,
+          "id": "condition1",
+          "instruction": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+          "source": {
+            "start": 0,
+            "end": 123,
+            "quote": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially)."
+          },
+          "predicate": {
+            "type": "visually_confirmed_state_change",
+            "object_id": "object1",
+            "state_dimension": "color",
+            "from_state": "green",
+            "to_state": "red",
+            "visual_criteria": "the cup body is red finally and green initially"
+          },
+          "required": true,
+          "scope": "final"
+        }
+      ]
+    },
+    "result": {
+      "verdict": "UNKNOWN",
+      "reason": "Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.",
+      "steps": [],
+      "constraints": [],
+      "conditions": [
+        {
+          "id": "condition1",
+          "verdict": "UNKNOWN",
+          "reason": "Missing, conflicting, repeated, low-confidence or invalid predicate evidence.",
+          "evidence_ids": [],
+          "required": true
+        }
+      ],
+      "evidence": []
+    },
+    "observations": [],
+    "initialization": {
+      "frame_reference": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3:0",
+      "objects": {
+        "object1": {
+          "x": 0.23125,
+          "y": 0.6055555555555555,
+          "width": 0.10625,
+          "height": 0.18333333333333332
+        }
+      },
+      "regions": {}
+    },
+    "media_metadata": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24.0,
+      "frame_count": 96,
+      "duration_s": 4.0,
+      "last_frame_s": 3.9583333333333335,
+      "sha256": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3",
+      "frame_reference": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3:0",
+      "source_sha256": "26eaa4ce9a0564712431d86d15e0810ac90617e6041f25c3be68458b730c3eef",
+      "normalized_sha256": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3",
+      "transformation": "ffmpeg autorotation, fit 1280x720, 24 fps, no audio"
+    },
+    "inference_usage": [
+      {
+        "model": "muse-wonder-1.0",
+        "usage_verified": true
+      },
+      {
+        "model": "sam-3.1",
+        "usage_verified": true
+      },
+      {
+        "model": "muse-spark-1.3",
+        "usage_verified": false
+      }
+    ],
+    "provenance": {
+      "compiler": "muse",
+      "tracker": "meta.sam-3.1",
+      "observer": "mask_hysteresis.v1;muse-spark-1.3"
+    },
+    "error": null,
+    "duration_s": 4.0,
+    "frame_reference": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3:0"
+  },
+  "track_review": [
+    {
+      "object_id": "object1",
+      "samples": 96,
+      "status_counts": {
+        "reliable": 96
+      },
+      "diagnostics": [],
+      "invalid_intervals": [],
+      "first_frame": 0,
+      "last_frame": 95
+    }
+  ],
+  "responses": [
+    {
+      "file": "response-1.json",
+      "sha256": "05a731d6b9351e6b7107699286f2d5316eaf729ff0d43356dca939274a8c4fe9"
+    },
+    {
+      "file": "response-2.json",
+      "sha256": "f761aa960e21e55883fe8f0c966ff4f9d545844035210d275f52d2688fe0c1fa"
+    },
+    {
+      "file": "response-3.json",
+      "sha256": "1d6c9b53a1e7f48e72a31544c4b60faed6b9ce81acde7f4e7814c4d20db1c5bb"
+    }
+  ],
+  "normalized_video_sha256": "b7d2b8ce2fde58ee066c8bdd32a031d7634d42e8b35af125a12c3d8dfd8846a3"
+}

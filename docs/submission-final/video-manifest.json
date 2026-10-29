@@ -1,0 +1,127 @@
+{
+  "path": "docs/submission-final/reality-compiler-demo.mp4",
+  "sha256": "d83ed0ade7c63427dff898d297a5e86465d8265ce0c2a8c8b75ac8e139a69e5b",
+  "bytes": 9419425,
+  "planned_duration_s": 145.49,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "full_audio_video_decode": "passed",
+  "narration": "local Microsoft Zira synthetic voice",
+  "editing": "Real application recordings with cuts; selection chapter is a labeled historical still. Editorial captions outside UI. No fabricated results or model activity.",
+  "scenes": [
+    {
+      "id": "opening",
+      "start_s": 0,
+      "duration_s": 11.89,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "program",
+      "start_s": 11.89,
+      "duration_s": 14.16,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "selection",
+      "start_s": 26.05,
+      "duration_s": 8.47,
+      "label": "Historical application still \u00c2\u00b7 Generated input \u00c2\u00b7 Earlier selection flow"
+    },
+    {
+      "id": "tracking",
+      "start_s": 34.52,
+      "duration_s": 13.93,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "evidence",
+      "start_s": 48.45,
+      "duration_s": 13.8,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "source",
+      "start_s": 62.25,
+      "duration_s": 13.81,
+      "label": "Separate generated-input upload \u00c2\u00b7 Local OpenCV \u00c2\u00b7 No SAM \u00c2\u00b7 Actual source-frame inspection"
+    },
+    {
+      "id": "reverse",
+      "start_s": 76.06,
+      "duration_s": 13,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "comparison",
+      "start_s": 89.06,
+      "duration_s": 14.91,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "unknown",
+      "start_s": 103.97,
+      "duration_s": 14.64,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "provenance",
+      "start_s": 118.61,
+      "duration_s": 14.26,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    },
+    {
+      "id": "closing",
+      "start_s": 132.87,
+      "duration_s": 12.62,
+      "label": "Generated input \u00c2\u00b7 Captured Meta evidence \u00c2\u00b7 Local revisions \u00c2\u00b7 No new inference"
+    }
+  ],
+  "measured_media": {
+    "fps": 30,
+    "frames": 4353,
+    "duration_s": 145.1,
+    "bytes": 9419425
+  },
+  "browser_playback": {
+    "duration_s": 145.621,
+    "width": 1920,
+    "height": 1080,
+    "playback": {
+      "time": 2.953615,
+      "paused": false,
+      "error": null
+    },
+    "seek": {
+      "time": 141,
+      "error": null
+    }
+  },
+  "inspected_scenes": [
+    "opening",
+    "program",
+    "selection",
+    "tracking",
+    "evidence",
+    "source",
+    "reverse",
+    "comparison",
+    "unknown",
+    "provenance",
+    "closing"
+  ],
+  "visual_inspection": "All eleven chapter samples inspected, including full-size comparison/source frames",
+  "readiness_review_2026_10_29": {
+    "decision": "preserve unchanged; synthetic trio is supplementary local-CV evidence",
+    "sha256_reverified": true,
+    "full_audio_video_decode": "passed",
+    "chapter_samples_visually_inspected": 11,
+    "browser_duration_s": 145.621,
+    "browser_played_to_end": true,
+    "browser_error": null
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-28",
+  "backend": {
+    "command": "uv run pytest --basetemp .pytest-tmp -q",
+    "passed": 332,
+    "warnings": [
+      "Existing Starlette httpx TestClient deprecation warning"
+    ]
+  },
+  "backend_lint": "uv run ruff check .: PASS",
+  "format": "uv run ruff format --check .: PASS",
+  "strict_types": "uv run mypy: PASS (31 source files)",
+  "lock": "uv lock --check: PASS",
+  "frontend": {
+    "test": "npm --prefix frontend test: PASS (19 tests)",
+    "lint": "npm --prefix frontend run lint: PASS",
+    "typecheck": "npm --prefix frontend run typecheck: PASS",
+    "build": "npm --prefix frontend run build: PASS",
+    "audit": "npm --prefix frontend audit --audit-level=moderate: 0 vulnerabilities"
+  },
+  "python_security": {
+    "scanner": "OSV querybatch",
+    "packages_checked": 38,
+    "findings": []
+  },
+  "credential_scan": {
+    "credential_literal_scan": "PASS",
+    "files_checked": 239,
+    "matching_files": []
+  },
+  "replay": "uv run python -m scripts.replay_milestone5: PASS, 17 response hashes, all captured verdicts reproduced, 0 network calls",
+  "local_container_workflow": "scripts/docker_smoke.py against isolated loopback server: frontend/playback/fixture PASS/FAIL/evaluation history/unsupported UNKNOWN/cost 0 verified",
+  "docker_engine": "Unavailable locally: Docker Desktop Linux named pipe absent; hosted CI required",
+  "independent_review": "Four verified issues fixed: source-wide ID collisions, initial history race, offline compiler isolation, import startup recovery; regressions added",
+  "browser": [
+    "Actual upload, Wonder compilation, first-frame manual selections, SAM processing, evidence seek, PASS/FAIL and UNKNOWN comparisons",
+    "Persisted history after offline restart",
+    "Offline capture review clearly labeled; immutable generated source hashes verified",
+    "390px viewport: DOM document width 375px, no horizontal overflow observed; override reset"
+  ],
+  "persistent_paid_gates_disabled": true
+}

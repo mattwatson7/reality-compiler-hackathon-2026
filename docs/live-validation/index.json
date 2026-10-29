@@ -1,0 +1,795 @@
+{
+  "recorded_date": "2026-10-28",
+  "timezone": "Asia/Bangkok",
+  "synthetic_inputs": true,
+  "genuine_recordings": 0,
+  "real_world_validation": "unverified",
+  "attempts": [
+    {
+      "directory": "live-api-browser-correct",
+      "case": "browser-correct",
+      "status": "completed",
+      "verdict": "PASS",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "status": "validated",
+          "audit_source": "application per-request usage ledger",
+          "usage_verified": true
+        },
+        {
+          "model": "sam-3.1",
+          "status": "validated",
+          "audit_source": "application per-request usage ledger",
+          "usage_verified": true
+        }
+      ]
+    },
+    {
+      "directory": "live-api-color",
+      "case": "color",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (events: missing_or_fabricated_semantics; expected=0 received=1)",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:27:00.353332+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:27:05.648417+00:00",
+          "usage": {
+            "completion_tokens": 773,
+            "prompt_tokens": 310,
+            "total_tokens": 1083,
+            "completion_tokens_details": {
+              "reasoning_tokens": 391
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 116
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-correct",
+      "case": "correct",
+      "status": "failed",
+      "verdict": null,
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:26:10.467196+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:26:15.144142+00:00",
+          "usage": {
+            "completion_tokens": 617,
+            "prompt_tokens": 386,
+            "total_tokens": 1003,
+            "completion_tokens_details": {
+              "reasoning_tokens": 145
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:26:17.434871+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:26:28.394771+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-reverse",
+      "case": "reverse",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (events[0].instruction: source_semantics_mismatch; expected source [0:90])",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:26:50.702984+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:26:54.801117+00:00",
+          "usage": {
+            "completion_tokens": 660,
+            "prompt_tokens": 386,
+            "total_tokens": 1046,
+            "completion_tokens_details": {
+              "reasoning_tokens": 207
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 372
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-ambiguous",
+      "case": "ambiguous",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:31:45.250617+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:31:49.146224+00:00",
+          "usage": {
+            "completion_tokens": 792,
+            "prompt_tokens": 400,
+            "total_tokens": 1192,
+            "completion_tokens_details": {
+              "reasoning_tokens": 322
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 372
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:31:50.275446+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:32:01.161831+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-color",
+      "case": "color",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (conditions[0].observability: source_semantics_mismatch; expected source [0:123])",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:32:49.369568+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:32:54.625447+00:00",
+          "usage": {
+            "completion_tokens": 732,
+            "prompt_tokens": 324,
+            "total_tokens": 1056,
+            "completion_tokens_details": {
+              "reasoning_tokens": 370
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 116
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-correct",
+      "case": "correct",
+      "status": "completed",
+      "verdict": "PASS",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:28:04.616096+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:28:08.128463+00:00",
+          "usage": {
+            "completion_tokens": 733,
+            "prompt_tokens": 400,
+            "total_tokens": 1133,
+            "completion_tokens_details": {
+              "reasoning_tokens": 263
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:28:10.723341+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:28:21.442789+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-incomplete",
+      "case": "incomplete",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:32:18.817366+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:32:23.286579+00:00",
+          "usage": {
+            "completion_tokens": 836,
+            "prompt_tokens": 400,
+            "total_tokens": 1236,
+            "completion_tokens_details": {
+              "reasoning_tokens": 366
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 372
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:32:23.938132+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:32:29.428236+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 50
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-missing",
+      "case": "missing",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:29:44.039581+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:29:48.476491+00:00",
+          "usage": {
+            "completion_tokens": 770,
+            "prompt_tokens": 400,
+            "total_tokens": 1170,
+            "completion_tokens_details": {
+              "reasoning_tokens": 299
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:29:49.774048+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:30:00.640904+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-occlusion",
+      "case": "occlusion",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:31:09.506219+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:31:13.221615+00:00",
+          "usage": {
+            "completion_tokens": 719,
+            "prompt_tokens": 400,
+            "total_tokens": 1119,
+            "completion_tokens_details": {
+              "reasoning_tokens": 249
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 372
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:31:14.242397+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:31:26.030978+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-repeated",
+      "case": "repeated",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:30:27.711102+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:30:31.752544+00:00",
+          "usage": {
+            "completion_tokens": 800,
+            "prompt_tokens": 400,
+            "total_tokens": 1200,
+            "completion_tokens_details": {
+              "reasoning_tokens": 330
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 372
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:30:37.146040+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:30:47.294683+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-reverse",
+      "case": "reverse",
+      "status": "completed",
+      "verdict": "FAIL",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:29:00.619204+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:29:04.965845+00:00",
+          "usage": {
+            "completion_tokens": 729,
+            "prompt_tokens": 400,
+            "total_tokens": 1129,
+            "completion_tokens_details": {
+              "reasoning_tokens": 259
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:29:06.982059+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:29:18.135855+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v2-unsupported",
+      "case": "unsupported",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (conditions[0].scope: source_semantics_mismatch; expected source [91:117])",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:32:39.242649+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:32:45.039294+00:00",
+          "usage": {
+            "completion_tokens": 942,
+            "prompt_tokens": 426,
+            "total_tokens": 1368,
+            "completion_tokens_details": {
+              "reasoning_tokens": 388
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 116
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v3-color",
+      "case": "color",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (conditions[0].predicate: source_semantics_mismatch; expected source [0:123])",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:45:47.158726+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:45:53.199175+00:00",
+          "usage": {
+            "completion_tokens": 695,
+            "prompt_tokens": 398,
+            "total_tokens": 1093,
+            "completion_tokens_details": {
+              "reasoning_tokens": 419
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v3-unsupported",
+      "case": "unsupported",
+      "status": "failed",
+      "verdict": null,
+      "error": "Muse graph rejected (task_graph_schema.conditions.0: invalid_typed_graph_or_references)",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:45:36.464660+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:45:40.962819+00:00",
+          "usage": {
+            "completion_tokens": 877,
+            "prompt_tokens": 570,
+            "total_tokens": 1447,
+            "completion_tokens_details": {
+              "reasoning_tokens": 331
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v4-color",
+      "case": "color",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:47:42.140640+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:47:46.048888+00:00",
+          "usage": {
+            "completion_tokens": 507,
+            "prompt_tokens": 398,
+            "total_tokens": 905,
+            "completion_tokens_details": {
+              "reasoning_tokens": 179
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:47:47.061331+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:47:57.160155+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        },
+        {
+          "model": "muse-spark-1.3",
+          "started_at": "2026-10-27T18:48:04.698394+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:48:12.102905+00:00",
+          "usage": {
+            "completion_tokens": 1293,
+            "prompt_tokens": 11800,
+            "total_tokens": 13093,
+            "completion_tokens_details": {
+              "reasoning_tokens": 1125
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v4-unsupported",
+      "case": "unsupported",
+      "status": "completed",
+      "verdict": "UNKNOWN",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:47:07.600333+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:47:12.817144+00:00",
+          "usage": {
+            "completion_tokens": 963,
+            "prompt_tokens": 570,
+            "total_tokens": 1533,
+            "completion_tokens_details": {
+              "reasoning_tokens": 411
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 500
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:47:13.697770+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:47:25.577419+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v5-color",
+      "case": "color",
+      "status": "completed",
+      "verdict": "PASS",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:49:15.539641+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:49:18.808671+00:00",
+          "usage": {
+            "completion_tokens": 435,
+            "prompt_tokens": 398,
+            "total_tokens": 833,
+            "completion_tokens_details": {
+              "reasoning_tokens": 160
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:49:19.779851+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:49:31.856758+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        },
+        {
+          "model": "muse-spark-1.3",
+          "started_at": "2026-10-27T18:49:39.681693+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:49:43.260086+00:00",
+          "usage": {
+            "completion_tokens": 246,
+            "prompt_tokens": 11645,
+            "total_tokens": 11891,
+            "completion_tokens_details": {
+              "reasoning_tokens": 97
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-api-v6-correct",
+      "case": "correct",
+      "status": "completed",
+      "verdict": "PASS",
+      "error": null,
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "started_at": "2026-10-27T18:50:07.899688+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:50:12.137836+00:00",
+          "usage": {
+            "completion_tokens": 900,
+            "prompt_tokens": 507,
+            "total_tokens": 1407,
+            "completion_tokens_details": {
+              "reasoning_tokens": 418
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 116
+            }
+          }
+        },
+        {
+          "model": "sam-3.1",
+          "started_at": "2026-10-27T18:50:13.199680+00:00",
+          "status": "returned",
+          "finished_at": "2026-10-27T18:50:23.925474+00:00",
+          "usage": {
+            "input_tokens": 0,
+            "input_tokens_details": {
+              "cached_tokens": 0
+            },
+            "output_tokens": 0,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 0,
+            "video_frames_processed": 96
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-validation-wonder-1",
+      "case": "compiler",
+      "status": "rejected",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "usage": {
+            "completion_tokens": 4096,
+            "prompt_tokens": 346,
+            "total_tokens": 4442,
+            "completion_tokens_details": {
+              "reasoning_tokens": 3574
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "directory": "live-validation-wonder-2",
+      "case": "compiler",
+      "status": "accepted",
+      "calls": [
+        {
+          "model": "muse-wonder-1.0",
+          "usage": {
+            "completion_tokens": 720,
+            "prompt_tokens": 386,
+            "total_tokens": 1106,
+            "completion_tokens_details": {
+              "reasoning_tokens": 249
+            },
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "new_inference_call_counts": {
+    "muse-wonder-1.0": 21,
+    "sam-3.1": 14,
+    "muse-spark-1.3": 2
+  }
+}

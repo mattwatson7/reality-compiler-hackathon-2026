@@ -1,0 +1,92 @@
+{
+  "case": "reverse",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "started_at": "2026-10-27T18:26:47.317850+00:00",
+  "calls": [
+    {
+      "model": "muse-wonder-1.0",
+      "started_at": "2026-10-27T18:26:50.702984+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:26:54.801117+00:00",
+      "usage": {
+        "completion_tokens": 660,
+        "prompt_tokens": 386,
+        "total_tokens": 1046,
+        "completion_tokens_details": {
+          "reasoning_tokens": 207
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 372
+        }
+      }
+    }
+  ],
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "source_sha256": "a8b6dfe5b509d79bf92c90f4e819d5a6d76d679888fb4eb5b2f3cbd15d4482fb",
+  "health": {
+    "status": "ok",
+    "mode": "meta_sam",
+    "live_inference": true,
+    "compiler_source": "muse",
+    "real_muse_compilation": true,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": true,
+      "models": [
+        "muse-wonder-1.0",
+        "sam-3.1",
+        "muse-spark-1.3-contributor",
+        "muse-voice-transcribe-1.0",
+        "muse-spark-1.3",
+        "muse-image-1.0",
+        "muse-spark-1.2-contributor",
+        "muse-spark-1.2",
+        "muse-spark-1.1"
+      ],
+      "paid_inference_enabled": true,
+      "sam_selectable": true,
+      "wonder_selectable": true,
+      "spark_selectable": true,
+      "reason": "Fresh authenticated discovery required for each server start"
+    }
+  },
+  "job_id": "789cd90733d24f92bc8c935b1de794eb",
+  "status": "failed",
+  "finished_at": "2026-10-27T18:26:54.943093+00:00",
+  "job": {
+    "id": "789cd90733d24f92bc8c935b1de794eb",
+    "status": "failed",
+    "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+    "graph": null,
+    "result": null,
+    "observations": [],
+    "initialization": null,
+    "media_metadata": null,
+    "inference_usage": [
+      {
+        "model": "muse-wonder-1.0",
+        "usage_verified": false
+      }
+    ],
+    "provenance": {},
+    "error": "Muse graph rejected (events[0].instruction: source_semantics_mismatch; expected source [0:90])",
+    "duration_s": null,
+    "frame_reference": null
+  },
+  "track_review": [],
+  "responses": [
+    {
+      "file": "response-1.json",
+      "sha256": "bcfaee8b2cc2311ec961c36afe0cd50813f9528f45f89353b219aea338cca342"
+    }
+  ]
+}

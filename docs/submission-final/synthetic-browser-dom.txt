@@ -1,0 +1,269 @@
+- main:
+  - link "⌘ REALITYCOMPILER":
+    - /url: /
+    - generic: ⌘
+    - generic: REALITYCOMPILER
+  - text: VERIFICATION STUDIO
+  - generic: M05
+  - generic: LOCAL CV / FIXTURE DEMOS
+  - generic: No live model inference. Local OpenCV processes selected objects in actual frames. Demo events are declared synthetic data. Meta inference requires explicit paid authorization.
+  - paragraph: "Meta catalog: not discovered. Paid inference: disabled. Paid inference requires explicit approval and both server enable flags"
+  - generic "Provider capabilities":
+    - generic: "Real Muse compilation: inactive"
+    - generic: "Real video verification: active"
+  - text: LANGUAGE → PROGRAM → EVIDENCE
+  - heading "Make procedures verifiable." [level=1]:
+    - text: Make procedures
+    - emphasis: verifiable.
+  - paragraph:
+    - text: Turn physical instructions into an inspectable verification program.
+    - text: Describe what should happen. Show what happened. Prove whether they match.
+  - text: REALITY COMPILER
+  - text: HACKATHON BUILD / 2026
+  - region "Procedure editor":
+    - text: 01 / DEFINE
+    - heading "The procedure" [level=2]
+    - generic: TASKGRAPH v2.0
+    - generic: Physical instructions
+    - textbox "Procedure": Move the blue block into the visible marked region before moving the cup into that region.
+    - paragraph: "Upload compiler: The local rules compiler supports a limited vocabulary of visible actions and explicit ordering. Unsupported requirements remain explicit and prevent PASS. Upload to compile once, then select each object and region on frame zero."
+    - button "Compile TaskGraph ↗":
+      - text: Compile TaskGraph
+      - generic: ↗
+    - heading "Try a known sequence" [level=3]
+    - paragraph: Two synthetic videos. Same instructions. Different order.
+    - button "Correct sequence ↗":
+      - text: Correct sequence
+      - generic: ↗
+    - button "Incorrect sequence ↗":
+      - text: Incorrect sequence
+      - generic: ↗
+    - generic: ↑
+    - strong: Bring your own recording
+    - generic: MP4, MOV or WebM · up to 100 MB / 30 sec · SAM or local CV
+    - button "Upload video"
+    - text: Upload perception
+    - combobox "Upload perception":
+      - option "Local OpenCV · real pixels, no Meta model" [selected]
+      - option "Meta SAM · paid authorization required" [disabled]
+      - option "Mock upload · UNKNOWN"
+      - option "Fixture Demo · synthetic · use sequence buttons above"
+    - text: Recording source
+    - combobox "Recording source":
+      - option "Unspecified source" [selected]
+      - option "Genuine camera recording · user declared"
+      - option "Generated demonstration · user declared"
+    - button "Verify uploaded video →" [disabled]:
+      - text: Verify uploaded video
+      - generic: →
+    - paragraph: Local CV requires a static camera, two distinctly colored saturated objects and a plain table. Occlusion or ambiguous tracking yields UNKNOWN. Region entry describes image geometry.
+  - status:
+    - generic: COMPLETED
+    - generic: Local OpenCV complete. Inspect tracking quality and evidence. SAM not used.
+    - generic: 100%
+    - progressbar "Job progress"
+  - region "Evidence review":
+    - text: 02 / OBSERVE
+    - heading "Evidence monitor" [level=2]
+    - generic: ACTUAL FRAMES / LOCAL CV / SAM NOT USED
+    - generic "Verification video"
+    - img "Tracking overlay":
+      - generic: region1
+      - generic "Tracked object1":
+        - generic: object1 · frame 0 · 0.99
+      - generic "Tracked object2":
+        - generic: object2 · frame 0 · 0.97
+    - generic: GENERATED · USER DECLARED / USER VIDEO / LOCAL OPENCV / NO SAM
+    - generic "Inspect original source frame"
+    - generic: EVENT TIMELINE
+    - text: 00:00.0
+    - generic: / 00:15.0
+    - generic "Evidence timeline":
+      - 'button "Seek to object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."': cv_object1_region1_50_54_0
+      - 'button "Seek to object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."': cv_object2_region1_108_111_0
+    - slider "Video playhead": "0"
+    - generic: 00:00
+    - generic: 00:07.5
+    - generic: 00:15.0
+    - generic: PASS
+    - paragraph: All required predicates and temporal constraints are supported.
+    - heading "Supporting evidence" [level=3]
+    - 'link "00:04.0–00:04.7 object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+      - /url: "#verification-video"
+      - text: "00:04.0–00:04.7 object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components. ↗"
+    - generic: local_cv
+    - generic "Saved supporting frames (9)"
+    - 'link "00:08.8–00:09.4 object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+      - /url: "#verification-video"
+      - text: "00:08.8–00:09.4 object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components. ↗"
+    - generic: local_cv
+    - generic "Saved supporting frames (8)"
+    - heading "Ordering constraints" [level=3]
+    - list:
+      - generic: PASS
+      - strong: event1 BEFORE event2
+      - generic: Required
+      - paragraph: Required order proven by disjoint predicate intervals.
+      - link "00:04.0–00:04.7 cv_object1_region1_50_54_0":
+        - /url: "#verification-video"
+        - text: 00:04.0–00:04.7 cv_object1_region1_50_54_0 ↗
+      - link "00:08.8–00:09.4 cv_object2_region1_108_111_0":
+        - /url: "#verification-video"
+        - text: 00:08.8–00:09.4 cv_object2_region1_108_111_0 ↗
+    - generic "Event observations (2)"
+    - paragraph: Media expires 11/5/2026, 10:10:40 PM. Run metadata is retained locally.
+    - region "Tracking diagnostics":
+      - heading "Measured tracking quality" [level=3]
+      - paragraph: Scores are conservative heuristics, not calibrated probabilities. Any lost or ambiguous identity invalidates that object's events.
+      - 'generic "object1: No tracking loss detected"'
+      - 'generic "object2: No tracking loss detected"'
+      - generic "Raw event candidates and independent provenance"
+  - region "Compare procedures":
+    - text: 04 / RE-EVALUATE
+    - heading "One recording. Different requirements." [level=2]
+    - paragraph: Change what should happen. Keep the original analysis and compare independent verdicts against the same evidence.
+    - generic: Revised procedure
+    - textbox "Revised procedure": Move the blue block into the visible marked region before moving the cup into that region.
+    - paragraph: Objects and region definitions must match the original selection. New requirements may need another analysis. Local compilation · no paid calls.
+    - button "Evaluate same evidence"
+    - text: Compare
+    - combobox "First evaluation":
+      - option "Evaluation 1 · PASS" [selected]
+      - option "Evaluation 2 · FAIL"
+      - option "Evaluation 3 · UNKNOWN"
+      - option "Evaluation 4 · PASS"
+    - text: With
+    - combobox "Second evaluation":
+      - option "Evaluation 1 · PASS"
+      - option "Evaluation 2 · FAIL"
+      - option "Evaluation 3 · UNKNOWN" [selected]
+      - option "Evaluation 4 · PASS"
+    - complementary "Evidence reuse verified":
+      - strong: Same perception fingerprint · independently evaluated requirements
+      - paragraph: No new perception for this revision. Inspect each compiler, tracker and observer below.
+      - paragraph: 25a7ca2e313922f130c99be6de6616b4a3eb43482400eda15e7f947d049e22b1
+    - article:
+      - generic: PASS
+      - strong: Evaluation 1
+      - paragraph: Move the blue block into the visible marked region before moving the cup into that region.
+      - paragraph: All required predicates and temporal constraints are supported.
+      - paragraph:
+        - text: "Compiler: local_rules · Tracker: local_cv.fixed_hsv.v1"
+        - text: "Observer: mask_hysteresis.v1"
+      - paragraph: Original analysis
+      - list:
+        - generic: PASS
+        - strong: "blue block enters selected region:"
+        - text: Exact predicate and arguments confirmed by one unambiguous occurrence.
+        - generic: PASS
+        - strong: "cup enters selected region:"
+        - text: Exact predicate and arguments confirmed by one unambiguous occurrence.
+        - generic: PASS
+        - strong: "blue block enters selected region before cup enters selected region:"
+        - text: Required order proven by disjoint predicate intervals.
+      - 'link "00:04.0–00:04.7 · object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+        - /url: "#verification-video"
+      - 'link "00:08.8–00:09.4 · object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+        - /url: "#verification-video"
+      - generic "Verification program and provenance"
+    - article:
+      - generic: UNKNOWN
+      - strong: Evaluation 3
+      - paragraph: Move the blue block into the visible marked region before moving the cup into that region. Ensure the cup is sterile.
+      - paragraph: Evidence is insufficient for the complete procedure; unsupported requirements cannot pass.
+      - paragraph:
+        - text: "Compiler: local_rules · Tracker: local_cv.fixed_hsv.v1"
+        - text: "Observer: mask_hysteresis.v1"
+      - paragraph: Same visual evidence · no new perception · SAM and Spark not called again
+      - list:
+        - generic: PASS
+        - strong: "blue block enters selected region:"
+        - text: Exact predicate and arguments confirmed by one unambiguous occurrence.
+        - generic: PASS
+        - strong: "cup enters selected region:"
+        - text: Exact predicate and arguments confirmed by one unambiguous occurrence.
+        - generic: PASS
+        - strong: "blue block enters selected region before cup enters selected region:"
+        - text: Required order proven by disjoint predicate intervals.
+        - generic: UNKNOWN
+        - strong: "Ensure the cup is sterile.:"
+        - text: Outside the controlled visual grammar; all text and qualifiers are retained. Hidden properties and implicit physical containment cannot be verified.
+      - 'link "00:04.0–00:04.7 · object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+        - /url: "#verification-video"
+      - 'link "00:08.8–00:09.4 · object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components."':
+        - /url: "#verification-video"
+      - generic "Verification program and provenance"
+  - text: 03 / INSPECT
+  - heading "The verification program" [level=2]
+  - generic: STRICT JSON SCHEMA
+  - generic "Compiled program":
+    - generic: TaskGraph v2.0
+    - generic: "Compilation source: local_rules"
+    - region "Program objects":
+      - heading "Objects" [level=3]
+      - article:
+        - text: object1
+        - heading "blue block" [level=4]
+        - paragraph: The procedure's blue block.
+        - paragraph: Identify the blue block.
+      - article:
+        - text: object2
+        - heading "cup" [level=4]
+        - paragraph: The procedure's cup.
+        - paragraph: Identify the cup.
+    - region "Program regions":
+      - heading "Visible image regions" [level=3]
+      - paragraph: Region transitions refer to visible image areas; they do not establish physical containment.
+      - article:
+        - text: region1
+        - heading "Visible image region for marked; a transition does not prove physical containment." [level=4]
+        - paragraph: Locate the visible image region for marked.
+        - paragraph: visible_image_region
+        - generic: SUPPORTED
+    - region "Program events":
+      - heading "Events" [level=3]
+      - article:
+        - text: event1
+        - generic: Required
+        - heading "Move the blue block into the visible marked region before moving the cup into that region." [level=4]
+        - code: object_entered_region
+        - paragraph:
+          - text: "Object:"
+          - strong: object1
+        - paragraph:
+          - text: "Region:"
+          - strong: region1
+        - generic: SUPPORTED
+        - paragraph:
+          - generic: "Source [0, 90): “Move the blue block into the visible marked region before moving the cup into that region.”"
+      - article:
+        - text: event2
+        - generic: Required
+        - heading "Move the blue block into the visible marked region before moving the cup into that region." [level=4]
+        - code: object_entered_region
+        - paragraph:
+          - text: "Object:"
+          - strong: object2
+        - paragraph:
+          - text: "Region:"
+          - strong: region1
+        - generic: SUPPORTED
+        - paragraph:
+          - generic: "Source [0, 90): “Move the blue block into the visible marked region before moving the cup into that region.”"
+    - region "Program temporal constraints":
+      - heading "Temporal constraints" [level=3]
+      - list:
+        - text: constraint1
+        - strong: event1 BEFORE event2
+        - paragraph:
+          - generic: "Source [0, 90): “Move the blue block into the visible marked region before moving the cup into that region.”"
+    - region "Program conditions":
+      - heading "Conditions during the clip" [level=3]
+      - paragraph: None declared.
+    - region "Program final states":
+      - heading "Final states" [level=3]
+      - paragraph: Final states require evidence at the observable end of the clip.
+      - paragraph: None declared.
+    - generic "Inspect TaskGraph JSON · 2 events / 1 constraints"
+  - generic: REALITY COMPILER / MILESTONE 05
+  - generic: API BUDGET [private historical cost] / [private historical cost] · LOCAL CV / NO SAM

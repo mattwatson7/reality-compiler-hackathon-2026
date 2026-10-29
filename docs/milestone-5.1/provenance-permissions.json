@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-10-28T10:54:49.2986225Z",
+  "policy": "Public demonstration includes only existing project-generated media and screenshots. Third-party camera videos and extracted images stay local and untracked. Exact source match does not by itself confer redistribution permission.",
+  "controlled_camera_cases": "No new controlled correct/reverse/occlusion camera recordings available",
+  "paid_inference_performed": false,
+  "finished_demo_mp4_created": false,
+  "sources": [
+    "https://huggingface.co/api/datasets/Bigenlight/cube_in_cup_raw",
+    "https://huggingface.co/api/datasets/Bigenlight/cube_in_cup_raw/tree/e0a6957536ea3c3b2ab063376103378428c34a8e?recursive=true&expand=false",
+    "https://github.com/WEIRDLabUW/WEIRDLabUW.github.io/blob/1525e9f1185c1620c9de5a5dc4ca908fd5432471/omnireset/index.html",
+    "https://api.github.com/repos/UW-Lab/UWLab"
+  ],
+  "assets": [
+    {
+      "path": "recordings/external/3_16_peg_eval_continual_success.mp4",
+      "sha256": "21da6950563fa18ef0c1f7d93767c6e241651b38535866d6f66fb58e02a94971",
+      "bytes": 7997369,
+      "kind": "third_party_camera",
+      "public_demo_allowed": false,
+      "redistribute_in_bundle": false,
+      "keep_untracked_local": true,
+      "source": {
+        "project": "https://weirdlabuw.github.io/omnireset/",
+        "website_source": "https://github.com/WEIRDLabUW/WEIRDLabUW.github.io/blob/1525e9f1185c1620c9de5a5dc4ca908fd5432471/omnireset/index.html",
+        "asset_url": "https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/peg/3_16_peg_eval_continual_success.mp4",
+        "streamed_sha256": "21da6950563fa18ef0c1f7d93767c6e241651b38535866d6f66fb58e02a94971",
+        "http_content_length": 7997369,
+        "match_method": "Stream authoritative website media into SHA-256 in memory; no remote copy saved",
+        "exact_bytes_match": true
+      },
+      "license": {
+        "declared": null,
+        "status": "video-specific redistribution permission not established",
+        "attribution": "Patrick Yin, Tyler Westenbroek and collaborators; Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning; ICLR 2026; University of Washington, NVIDIA, Microsoft Research",
+        "code_repository": "https://github.com/UW-Lab/UWLab",
+        "code_license": "BSD-3-Clause per repository metadata; does not establish license for separate website media",
+        "required_next_step": "Explicit permission or a license clearly covering these video assets before any public video/frame distribution"
+      }
+    },
+    {
+      "path": "recordings/external/cam1.mp4",
+      "sha256": "26a4f40bcecbb23bf7f92c5d106ca013155283e9672e94f9efe3807c9f783f56",
+      "bytes": 4493342,
+      "kind": "third_party_camera",
+      "public_demo_allowed": false,
+      "redistribute_in_bundle": false,
+      "keep_untracked_local": true,
+      "source": {
+        "repository": "https://huggingface.co/datasets/Bigenlight/cube_in_cup_raw",
+        "revision": "e0a6957536ea3c3b2ab063376103378428c34a8e",
+        "asset_path": "take_03_20260720_205457/cam1.mp4",
+        "asset_url": "https://huggingface.co/datasets/Bigenlight/cube_in_cup_raw/blob/e0a6957536ea3c3b2ab063376103378428c34a8e/take_03_20260720_205457/cam1.mp4",
+        "published_lfs_sha256": "26a4f40bcecbb23bf7f92c5d106ca013155283e9672e94f9efe3807c9f783f56",
+        "published_bytes": 4493342,
+        "match_method": "local SHA-256 and size match repository Git LFS object metadata; remote media not downloaded",
+        "exact_bytes_match": true
+      },
+      "license": {
+        "declared": "Apache-2.0",
+        "scope": "dataset-card declaration",
+        "attribution": "Bigenlight, cube_in_cup_raw, take_03_20260720_205457/cam1.mp4",
+        "status": "exact take identified; package excludes third-party video by editorial choice",
+        "distribution_conditions": "Before any future distribution, preserve the license, applicable notices and attribution; identify modifications; verify any additional rights applicable to the intended use."
+      }
+    },
+    {
+      "path": "recordings/external/real_nonprehensile.mp4",
+      "sha256": "2f0ab52f71f7af787bbcde5040a8611f44415b6ccc3f163ce7077b8df4706b92",
+      "bytes": 2621543,
+      "kind": "third_party_camera",
+      "public_demo_allowed": false,
+      "redistribute_in_bundle": false,
+      "keep_untracked_local": true,
+      "source": {
+        "project": "https://weirdlabuw.github.io/omnireset/",
+        "website_source": "https://github.com/WEIRDLabUW/WEIRDLabUW.github.io/blob/1525e9f1185c1620c9de5a5dc4ca908fd5432471/omnireset/index.html",
+        "asset_url": "https://omnireset-website.s3.us-west-004.backblazeb2.com/cherry_pick/real_nonprehensile.mp4",
+        "streamed_sha256": "2f0ab52f71f7af787bbcde5040a8611f44415b6ccc3f163ce7077b8df4706b92",
+        "http_content_length": 2621543,
+        "match_method": "Stream authoritative website media into SHA-256 in memory; no remote copy saved",
+        "exact_bytes_match": true
+      },
+      "license": {
+        "declared": null,
+        "status": "video-specific redistribution permission not established",
+        "attribution": "Patrick Yin, Tyler Westenbroek and collaborators; Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning; ICLR 2026; University of Washington, NVIDIA, Microsoft Research",
+        "code_repository": "https://github.com/UW-Lab/UWLab",
+        "code_license": "BSD-3-Clause per repository metadata; does not establish license for separate website media",
+        "required_next_step": "Explicit permission or a license clearly covering these video assets before any public video/frame distribution"
+      }
+    },
+    {
+      "path": "recordings/external/real_perturb.mp4",
+      "sha256": "efb06c17f2a90394f539f311efcb41d2b3deb4c5e0840c154f35077ba43c5bd9",
+      "bytes": 7270171,
+      "kind": "third_party_camera",
+      "public_demo_allowed": false,
+      "redistribute_in_bundle": false,
+      "keep_untracked_local": true,
+      "source": {
+        "project": "https://weirdlabuw.github.io/omnireset/",
+        "website_source": "https://github.com/WEIRDLabUW/WEIRDLabUW.github.io/blob/1525e9f1185c1620c9de5a5dc4ca908fd5432471/omnireset/index.html",
+        "asset_url": "https://f004.backblazeb2.com/file/omnireset-website/cherry_pick/real_perturb.mp4",
+        "streamed_sha256": "efb06c17f2a90394f539f311efcb41d2b3deb4c5e0840c154f35077ba43c5bd9",
+        "http_content_length": 7270171,
+        "match_method": "Stream authoritative website media into SHA-256 in memory; no remote copy saved",
+        "exact_bytes_match": true
+      },
+      "license": {
+        "declared": null,
+        "status": "video-specific redistribution permission not established",
+        "attribution": "Patrick Yin, Tyler Westenbroek and collaborators; Emergent Dexterity via Diverse Resets and Large-Scale Reinforcement Learning; ICLR 2026; University of Washington, NVIDIA, Microsoft Research",
+        "code_repository": "https://github.com/UW-Lab/UWLab",
+        "code_license": "BSD-3-Clause per repository metadata; does not establish license for separate website media",
+        "required_next_step": "Explicit permission or a license clearly covering these video assets before any public video/frame distribution"
+      }
+    },
+    {
+      "path": "docs/live-validation/live-api-v6-correct/source.mp4",
+      "sha256": "4624c1de70495ebc6d07bdb901421cf13aca543bbf2f31e023b85b1cfd021617",
+      "bytes": 39106,
+      "kind": "project_generated_media_or_product_screenshot",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "basis": "Existing project-created synthetic drawing and product UI; source generation in scripts/meta_smoke.py synthetic_clip; milestone-5 report identifies screenshots as generated-input views",
+      "required_label": "Generated footage; offline review of actual captured Meta evidence; no new inference",
+      "limitation": "Existing screenshots document earlier UI state, not a new milestone-5.1 browser test"
+    },
+    {
+      "path": "docs/live-validation/live-api-v6-correct/video.mp4",
+      "sha256": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f",
+      "bytes": 31661,
+      "kind": "project_generated_media_or_product_screenshot",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "basis": "Existing project-created synthetic drawing and product UI; source generation in scripts/meta_smoke.py synthetic_clip; milestone-5 report identifies screenshots as generated-input views",
+      "required_label": "Generated footage; offline review of actual captured Meta evidence; no new inference",
+      "limitation": "Existing screenshots document earlier UI state, not a new milestone-5.1 browser test"
+    },
+    {
+      "path": "docs/milestone-5/browser-selection.jpg",
+      "sha256": "7fbebee649c2152816c09f6244f59883930e3fb3cf98905501a000cb533e80be",
+      "bytes": 114035,
+      "kind": "project_generated_media_or_product_screenshot",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "basis": "Existing project-created synthetic drawing and product UI; source generation in scripts/meta_smoke.py synthetic_clip; milestone-5 report identifies screenshots as generated-input views",
+      "required_label": "Generated footage; offline review of actual captured Meta evidence; no new inference",
+      "limitation": "Existing screenshots document earlier UI state, not a new milestone-5.1 browser test"
+    },
+    {
+      "path": "docs/milestone-5/browser-pass-fail.jpg",
+      "sha256": "194a4c04cbdd47c85c1efc6f5c5e124802fcad6f87d4a4ae132da78b50532409",
+      "bytes": 131322,
+      "kind": "project_generated_media_or_product_screenshot",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "basis": "Existing project-created synthetic drawing and product UI; source generation in scripts/meta_smoke.py synthetic_clip; milestone-5 report identifies screenshots as generated-input views",
+      "required_label": "Generated footage; offline review of actual captured Meta evidence; no new inference",
+      "limitation": "Existing screenshots document earlier UI state, not a new milestone-5.1 browser test"
+    },
+    {
+      "path": "docs/milestone-5/browser-pass-unknown.jpg",
+      "sha256": "508ca6f62807aab09f3035ba9da5fa986eeffb769c82b56d75b17f43328e47ed",
+      "bytes": 134976,
+      "kind": "project_generated_media_or_product_screenshot",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "basis": "Existing project-created synthetic drawing and product UI; source generation in scripts/meta_smoke.py synthetic_clip; milestone-5 report identifies screenshots as generated-input views",
+      "required_label": "Generated footage; offline review of actual captured Meta evidence; no new inference",
+      "limitation": "Existing screenshots document earlier UI state, not a new milestone-5.1 browser test"
+    },
+    {
+      "path": "docs/milestone-5.1/browser-mobile.jpg",
+      "sha256": "879bf6c0a71f79d2d36beeb4c1ffee5cf3782af72f2f84793dda9686dbc3356d",
+      "bytes": 43358,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    },
+    {
+      "path": "docs/milestone-5.1/browser-pass-fail.jpg",
+      "sha256": "8db26e76a4d87c232dcde5b1eaa4d245381f72995ca6bd41f4593b743ad280e4",
+      "bytes": 493185,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    },
+    {
+      "path": "docs/milestone-5.1/browser-selection.jpg",
+      "sha256": "d6a50506d2b812960a44643a1d3b3770e518be37822b663f07dac31f357cedfe",
+      "bytes": 77448,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    },
+    {
+      "path": "docs/milestone-5.1/browser-source-attribution.jpg",
+      "sha256": "0a99fd1bbda6a5efa8fc853013ad440c54ba054b6119897f0247eaeca3b97bd7",
+      "bytes": 64310,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    },
+    {
+      "path": "docs/milestone-5.1/comparison-desktop.jpg",
+      "sha256": "0afded28aed62be628c012153902370baf437d721eecfcc9372f6d5f5d7f1f4d",
+      "bytes": 108400,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    },
+    {
+      "path": "docs/milestone-5.1/comparison-unknown.jpg",
+      "sha256": "f374f327451a7d62388c70f4e60be4ae33f5242afe1f2349b6903dd72d48b0b2",
+      "bytes": 106193,
+      "kind": "project_ui_screenshot_generated_input",
+      "public_demo_allowed": true,
+      "redistribute_in_bundle": true,
+      "attribution": "Reality Compiler project UI; generated source, prior Meta captures or new local CV as visibly labeled; no third-party camera pixels."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "file": "recordings/external/3_16_peg_eval_continual_success.mp4",
+    "sha256": "21da6950563fa18ef0c1f7d93767c6e241651b38535866d6f66fb58e02a94971",
+    "width": 1280,
+    "height": 576,
+    "fps": 30.0,
+    "declared_frames": 1845,
+    "decoded_frames": 1845,
+    "duration_s": 61.5,
+    "bytes": 7997369,
+    "classification": "user-supplied third-party camera footage; source identity inferred from public filename/site, not byte-verified"
+  },
+  {
+    "file": "recordings/external/cam1.mp4",
+    "sha256": "26a4f40bcecbb23bf7f92c5d106ca013155283e9672e94f9efe3807c9f783f56",
+    "width": 1280,
+    "height": 720,
+    "fps": 30.0,
+    "declared_frames": 323,
+    "decoded_frames": 323,
+    "duration_s": 10.766666666666667,
+    "bytes": 4493342,
+    "classification": "user-supplied third-party camera footage; source identity inferred from public filename/site, not byte-verified"
+  },
+  {
+    "file": "recordings/external/real_nonprehensile.mp4",
+    "sha256": "2f0ab52f71f7af787bbcde5040a8611f44415b6ccc3f163ce7077b8df4706b92",
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97002997002997,
+    "declared_frames": 638,
+    "decoded_frames": 638,
+    "duration_s": 21.287933333333335,
+    "bytes": 2621543,
+    "classification": "user-supplied third-party camera footage; source identity inferred from public filename/site, not byte-verified"
+  },
+  {
+    "file": "recordings/external/real_perturb.mp4",
+    "sha256": "efb06c17f2a90394f539f311efcb41d2b3deb4c5e0840c154f35077ba43c5bd9",
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0,
+    "declared_frames": 1228,
+    "decoded_frames": 1228,
+    "duration_s": 49.12,
+    "bytes": 7270171,
+    "classification": "user-supplied third-party camera footage; source identity inferred from public filename/site, not byte-verified"
+  }
+]

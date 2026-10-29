@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-01a180a0-002b-7011-a955-f2a2136ce1c0",
+  "object": "chat.completion",
+  "model": "muse-wonder-1.0",
+  "usage": {
+    "completion_tokens": 572,
+    "prompt_tokens": 432,
+    "total_tokens": 1004,
+    "completion_tokens_details": {
+      "reasoning_tokens": 314
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 116
+    }
+  },
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"compilation_source\": \"muse\", \"conditions\": [{\"id\": \"condition1\", \"instruction\": \"At end, the green box is visible.\", \"observability\": \"SUPPORTED\", \"predicate\": {\"object_id\": \"object1\", \"type\": \"object_visible\"}, \"reason\": null, \"required\": true, \"scope\": \"final\", \"source\": {\"quote\": \"At end, the green box is visible.\", \"source_id\": \"clause1\"}}, {\"id\": \"condition2\", \"instruction\": \"Ensure the box is sterile.\", \"observability\": \"UNSUPPORTED\", \"predicate\": null, \"reason\": \"UNSUPPORTED\", \"required\": true, \"scope\": \"during\", \"source\": {\"quote\": \"Ensure the box is sterile.\", \"source_id\": \"clause2\"}}], \"constraints\": [], \"events\": [], \"objects\": [{\"description\": \"The procedure's green box.\", \"grounding_prompt\": \"Identify the green box.\", \"id\": \"object1\", \"label\": \"green box\"}], \"procedure\": \"At end, the green box is visible.\\nEnsure the box is sterile.\", \"regions\": [], \"version\": \"2.0\"}"
+      }
+    }
+  ]
+}

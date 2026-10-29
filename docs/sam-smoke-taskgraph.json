@@ -1,0 +1,79 @@
+{
+  "version": "2.0",
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "compilation_source": "local_rules",
+  "objects": [
+    {
+      "id": "object1",
+      "label": "blue block",
+      "description": "The procedure's blue block.",
+      "grounding_prompt": "Identify the blue block."
+    },
+    {
+      "id": "object2",
+      "label": "cup",
+      "description": "The procedure's cup.",
+      "grounding_prompt": "Identify the cup."
+    }
+  ],
+  "regions": [
+    {
+      "observability": "SUPPORTED",
+      "reason": null,
+      "id": "region1",
+      "description": "Visible image region for marked; a transition does not prove physical containment.",
+      "grounding_prompt": "Locate the visible image region for marked.",
+      "coordinate_semantics": "visible_image_region"
+    }
+  ],
+  "events": [
+    {
+      "observability": "SUPPORTED",
+      "reason": null,
+      "id": "event1",
+      "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+      "source": {
+        "start": 0,
+        "end": 90,
+        "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+      },
+      "predicate": {
+        "type": "object_entered_region",
+        "object_id": "object1",
+        "region_id": "region1"
+      },
+      "required": true
+    },
+    {
+      "observability": "SUPPORTED",
+      "reason": null,
+      "id": "event2",
+      "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+      "source": {
+        "start": 0,
+        "end": 90,
+        "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+      },
+      "predicate": {
+        "type": "object_entered_region",
+        "object_id": "object2",
+        "region_id": "region1"
+      },
+      "required": true
+    }
+  ],
+  "constraints": [
+    {
+      "id": "constraint1",
+      "operator": "BEFORE",
+      "first": "event1",
+      "second": "event2",
+      "source": {
+        "start": 0,
+        "end": 90,
+        "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+      }
+    }
+  ],
+  "conditions": []
+}

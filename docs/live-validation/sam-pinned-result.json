@@ -1,0 +1,239 @@
+{
+  "authorization_id": "meta-sam-only-m41-2026-10-28",
+  "plan_sha256": "001885ac8f3b42dc2e358521d14c30509d4af4331e3cb1c48802656b50e746e4",
+  "started_at": "2026-10-27T18:22:04.420631+00:00",
+  "status": "validated_segmentation",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "evaluation_status": "completed",
+  "wonder_requests": 0,
+  "spark_requests": 0,
+  "automatic_retries": 0,
+  "plan": {
+    "authorization_id": "meta-sam-only-m41-2026-10-28",
+    "authorization_status": "pending_human_approval",
+    "video_sha256": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401",
+    "graph_sha256": "92eb3e93b10ab228cba33703a90656c1bd849f10304bf6429f6e8167d1019815",
+    "selections_sha256": "929d5a24a6d9bf21b36f6cb0f47f82f7d7009641b63a5192007e43133fadcf23",
+    "media": {
+      "width": 320,
+      "height": 180,
+      "fps": 24.0,
+      "frame_count": 72,
+      "duration_s": 3.0,
+      "last_frame_s": 2.9583333333333335,
+      "sha256": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401",
+      "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+    },
+    "model": "sam-3.1",
+    "inference_requests": 1,
+    "wonder_requests": 0,
+    "spark_requests": 0,
+    "retries": 0,
+    "synthetic": true,
+    "real_world_validation": "unverified",
+    "pricing_checked_date": "2026-10-28",
+    "pricing_source": "https://dev.meta.ai/docs/pricing-rate-limits"
+  },
+  "finished_at": "2026-10-27T18:22:15.422563+00:00",
+  "paid_enabled": false,
+  "smoke_approved": false,
+  "attempts": 1,
+  "reported_usage": {
+    "video_frames_processed": 72
+  },
+  "usage": [
+    {
+      "model": "sam-3.1",
+      "usage_verified": true
+    }
+  ],
+  "billing_note": "Response usage at published rates, not a billing invoice; uncertain or failed adapter results retain the reservation.",
+  "observations": [
+    {
+      "start_s": 0.9166666666666666,
+      "end_s": 1.0416666666666667,
+      "occurrence_id": "cv_object1_region1_22_25_0",
+      "event_id": "event1",
+      "predicate": {
+        "type": "object_entered_region",
+        "object_id": "object1",
+        "region_id": "region1"
+      },
+      "polarity": "CONFIRMED",
+      "confidence": 0.9569876790046692,
+      "evidence": {
+        "start_s": 0.8333333333333334,
+        "end_s": 1.2083333333333333,
+        "id": "cv_object1_region1_22_25_0",
+        "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+        "source": "meta_sam",
+        "model_id": "sam-3.1",
+        "frame_indices": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+      },
+      "frame_indices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "quality_components": {
+        "minimum_support_quality": 0.9569876790046692
+      },
+      "provenance": "meta.sam-3.1.box_prompt.one_bit.v1;observer=mask_hysteresis.v1",
+      "usable": true,
+      "model_id": "sam-3.1"
+    },
+    {
+      "start_s": 1.9583333333333333,
+      "end_s": 2.0833333333333335,
+      "occurrence_id": "cv_object2_region1_47_50_0",
+      "event_id": "event2",
+      "predicate": {
+        "type": "object_entered_region",
+        "object_id": "object2",
+        "region_id": "region1"
+      },
+      "polarity": "CONFIRMED",
+      "confidence": 0.9488984942436218,
+      "evidence": {
+        "start_s": 1.875,
+        "end_s": 2.25,
+        "id": "cv_object2_region1_47_50_0",
+        "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+        "source": "meta_sam",
+        "model_id": "sam-3.1",
+        "frame_indices": [
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+      },
+      "frame_indices": [
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "quality_components": {
+        "minimum_support_quality": 0.9488984942436218
+      },
+      "provenance": "meta.sam-3.1.box_prompt.one_bit.v1;observer=mask_hysteresis.v1",
+      "usable": true,
+      "model_id": "sam-3.1"
+    }
+  ],
+  "evaluation": {
+    "verdict": "PASS",
+    "reason": "All required predicates and temporal constraints are supported.",
+    "steps": [
+      {
+        "id": "event1",
+        "verdict": "PASS",
+        "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+        "evidence_ids": [
+          "cv_object1_region1_22_25_0"
+        ],
+        "required": true
+      },
+      {
+        "id": "event2",
+        "verdict": "PASS",
+        "reason": "Exact predicate and arguments confirmed by one unambiguous occurrence.",
+        "evidence_ids": [
+          "cv_object2_region1_47_50_0"
+        ],
+        "required": true
+      }
+    ],
+    "constraints": [
+      {
+        "id": "constraint1",
+        "verdict": "PASS",
+        "reason": "Required order proven by disjoint predicate intervals.",
+        "evidence_ids": [
+          "cv_object1_region1_22_25_0",
+          "cv_object2_region1_47_50_0"
+        ],
+        "required": true
+      }
+    ],
+    "conditions": [],
+    "evidence": [
+      {
+        "start_s": 0.8333333333333334,
+        "end_s": 1.2083333333333333,
+        "id": "cv_object1_region1_22_25_0",
+        "description": "object_entered_region: object1 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+        "source": "meta_sam",
+        "model_id": "sam-3.1",
+        "frame_indices": [
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+      },
+      {
+        "start_s": 1.875,
+        "end_s": 2.25,
+        "id": "cv_object2_region1_47_50_0",
+        "description": "object_entered_region: object2 / region1; mask overlap <=10% outside, >=85% inside; three samples spanning >=0.15s; quality=min measured support components.",
+        "source": "meta_sam",
+        "model_id": "sam-3.1",
+        "frame_indices": [
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "frame_reference": "9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401:0"
+      }
+    ]
+  }
+}

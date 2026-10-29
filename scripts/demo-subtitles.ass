@@ -1,0 +1,12 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Title,Segoe UI,32,&H00CFF6B9,&H00FFFFFF,&H00101818,&H00101818,-1,0,0,0,100,100,0,0,1,0,0,7,160,100,6,1
+Style: Label,Segoe UI,20,&H00CFD8D1,&H00FFFFFF,&H00101818,&H00101818,0,0,0,0,100,100,0,0,1,0,0,7,160,100,44,1
+Style: Caption,Segoe UI,28,&H00FFFFFF,&H00FFFFFF,&H00101818,&H00101818,0,0,0,0,100,100,0,0,1,1,0,2,140,140,16,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

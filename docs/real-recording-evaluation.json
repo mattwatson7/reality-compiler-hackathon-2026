@@ -1,0 +1,17 @@
+{
+  "status": "unverified",
+  "evaluated_recordings": 0,
+  "records": [],
+  "real_world_validation": "unverified",
+  "sam_used": false,
+  "paid_calls": 0,
+  "authenticity": "Human-attested provenance; not independently authenticated",
+  "required_coverage": [
+    "PASS",
+    "FAIL",
+    "UNKNOWN"
+  ],
+  "matched_coverage": [],
+  "reason": "No genuine recordings supplied; real-world PASS/FAIL/UNKNOWN remain unverified",
+  "date": "2026-10-27"
+}

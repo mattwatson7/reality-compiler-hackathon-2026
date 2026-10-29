@@ -1,0 +1,93 @@
+{
+  "case": "unsupported",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "started_at": "2026-10-27T18:45:34.117984+00:00",
+  "calls": [
+    {
+      "model": "muse-wonder-1.0",
+      "started_at": "2026-10-27T18:45:36.464660+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:45:40.962819+00:00",
+      "usage": {
+        "completion_tokens": 877,
+        "prompt_tokens": 570,
+        "total_tokens": 1447,
+        "completion_tokens_details": {
+          "reasoning_tokens": 331
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region. Verify the cup is sterile.",
+  "source_sha256": "4624c1de70495ebc6d07bdb901421cf13aca543bbf2f31e023b85b1cfd021617",
+  "health": {
+    "status": "ok",
+    "mode": "meta_sam",
+    "live_inference": true,
+    "compiler_source": "muse",
+    "real_muse_compilation": true,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv",
+      "meta_sam"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": true,
+      "models": [
+        "muse-wonder-1.0",
+        "sam-3.1",
+        "muse-spark-1.3-contributor",
+        "muse-voice-transcribe-1.0",
+        "muse-spark-1.3",
+        "muse-image-1.0",
+        "muse-spark-1.2-contributor",
+        "muse-spark-1.2",
+        "muse-spark-1.1"
+      ],
+      "paid_inference_enabled": true,
+      "sam_selectable": true,
+      "wonder_selectable": true,
+      "spark_selectable": true,
+      "reason": "Fresh account catalog verified; paid dispatch is enabled"
+    }
+  },
+  "job_id": "4c5dcf0efec744f293cb2363ce0f3c37",
+  "status": "failed",
+  "finished_at": "2026-10-27T18:45:41.133931+00:00",
+  "job": {
+    "id": "4c5dcf0efec744f293cb2363ce0f3c37",
+    "status": "failed",
+    "procedure": "Move the blue block into the visible marked region before moving the cup into that region. Verify the cup is sterile.",
+    "graph": null,
+    "result": null,
+    "observations": [],
+    "initialization": null,
+    "media_metadata": null,
+    "inference_usage": [
+      {
+        "model": "muse-wonder-1.0",
+        "usage_verified": false
+      }
+    ],
+    "provenance": {},
+    "error": "Muse graph rejected (task_graph_schema.conditions.0: invalid_typed_graph_or_references)",
+    "duration_s": null,
+    "frame_reference": null
+  },
+  "track_review": [],
+  "responses": [
+    {
+      "file": "response-1.json",
+      "sha256": "58aca60507d6c6dc3a4253d90d893c3754a1677703b9d5850dca99a2846f2725"
+    }
+  ]
+}

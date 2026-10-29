@@ -1,0 +1,233 @@
+{
+  "case": "correct",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "started_at": "2026-10-27T18:26:07.888210+00:00",
+  "calls": [
+    {
+      "model": "muse-wonder-1.0",
+      "started_at": "2026-10-27T18:26:10.467196+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:26:15.144142+00:00",
+      "usage": {
+        "completion_tokens": 617,
+        "prompt_tokens": 386,
+        "total_tokens": 1003,
+        "completion_tokens_details": {
+          "reasoning_tokens": 145
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "model": "sam-3.1",
+      "started_at": "2026-10-27T18:26:17.434871+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:26:28.394771+00:00",
+      "usage": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 0,
+        "video_frames_processed": 96
+      }
+    }
+  ],
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "source_sha256": "4624c1de70495ebc6d07bdb901421cf13aca543bbf2f31e023b85b1cfd021617",
+  "health": {
+    "status": "ok",
+    "mode": "meta_sam",
+    "live_inference": true,
+    "compiler_source": "muse",
+    "real_muse_compilation": true,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": true,
+      "models": [
+        "muse-wonder-1.0",
+        "sam-3.1",
+        "muse-spark-1.3-contributor",
+        "muse-voice-transcribe-1.0",
+        "muse-spark-1.3",
+        "muse-image-1.0",
+        "muse-spark-1.2-contributor",
+        "muse-spark-1.2",
+        "muse-spark-1.1"
+      ],
+      "paid_inference_enabled": true,
+      "sam_selectable": true,
+      "wonder_selectable": true,
+      "spark_selectable": true,
+      "reason": "Fresh authenticated discovery required for each server start"
+    }
+  },
+  "job_id": "39872b62b8964d7ba79f1c38829a732e",
+  "status": "failed",
+  "finished_at": "2026-10-27T18:26:48.825778+00:00",
+  "job": {
+    "id": "39872b62b8964d7ba79f1c38829a732e",
+    "status": "failed",
+    "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+    "graph": {
+      "version": "2.0",
+      "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+      "compilation_source": "muse",
+      "objects": [
+        {
+          "id": "object1",
+          "label": "blue block",
+          "description": "The procedure's blue block.",
+          "grounding_prompt": "Identify the blue block."
+        },
+        {
+          "id": "object2",
+          "label": "cup",
+          "description": "The procedure's cup.",
+          "grounding_prompt": "Identify the cup."
+        }
+      ],
+      "regions": [
+        {
+          "observability": "SUPPORTED",
+          "reason": null,
+          "id": "region1",
+          "description": "Visible image region for marked; a transition does not prove physical containment.",
+          "grounding_prompt": "Locate the visible image region for marked.",
+          "coordinate_semantics": "visible_image_region"
+        }
+      ],
+      "events": [
+        {
+          "observability": "SUPPORTED",
+          "reason": null,
+          "id": "event1",
+          "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "source": {
+            "start": 0,
+            "end": 90,
+            "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+          },
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object1",
+            "region_id": "region1"
+          },
+          "required": true
+        },
+        {
+          "observability": "SUPPORTED",
+          "reason": null,
+          "id": "event2",
+          "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+          "source": {
+            "start": 0,
+            "end": 90,
+            "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+          },
+          "predicate": {
+            "type": "object_entered_region",
+            "object_id": "object2",
+            "region_id": "region1"
+          },
+          "required": true
+        }
+      ],
+      "constraints": [
+        {
+          "id": "constraint1",
+          "operator": "BEFORE",
+          "first": "event1",
+          "second": "event2",
+          "source": {
+            "start": 0,
+            "end": 90,
+            "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "result": null,
+    "observations": [],
+    "initialization": {
+      "frame_reference": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f:0",
+      "objects": {
+        "object1": {
+          "x": 0.075,
+          "y": 0.21666666666666667,
+          "width": 0.0875,
+          "height": 0.15555555555555556
+        },
+        "object2": {
+          "x": 0.23125,
+          "y": 0.6055555555555555,
+          "width": 0.10625,
+          "height": 0.18333333333333332
+        }
+      },
+      "regions": {
+        "region1": {
+          "x": 0.53125,
+          "y": 0.08333333333333333,
+          "width": 0.4375,
+          "height": 0.8333333333333334
+        }
+      }
+    },
+    "media_metadata": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24.0,
+      "frame_count": 96,
+      "duration_s": 4.0,
+      "last_frame_s": 3.9583333333333335,
+      "sha256": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f",
+      "frame_reference": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f:0",
+      "source_sha256": "4624c1de70495ebc6d07bdb901421cf13aca543bbf2f31e023b85b1cfd021617",
+      "normalized_sha256": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f",
+      "transformation": "ffmpeg autorotation, fit 1280x720, 24 fps, no audio"
+    },
+    "inference_usage": [
+      {
+        "model": "muse-wonder-1.0",
+        "usage_verified": true
+      }
+    ],
+    "provenance": {
+      "compiler": "muse",
+      "tracker": "local_cv_fixed_hsv_v1",
+      "observer": "region_hysteresis_v1"
+    },
+    "error": null,
+    "duration_s": 4.0,
+    "frame_reference": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f:0"
+  },
+  "track_review": [],
+  "responses": [
+    {
+      "file": "response-1.json",
+      "sha256": "daed79c97a3e7523397965a50b0cb1e16d316bf2bab6e62aebfe70ad1c911dab"
+    },
+    {
+      "file": "response-2.json",
+      "sha256": "ecf5fee20ce0b05c257ad2a3aa1a4b86e5cd56509dcf70a7b27b92f301f3dd29"
+    }
+  ],
+  "normalized_video_sha256": "ebbbceaee54efeb70130fafa25451054ecb93283a4355d2800faf72f271b304f"
+}

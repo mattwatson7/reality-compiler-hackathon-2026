@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-01a18099-9d2c-73ba-932f-12a68045ce87",
+  "object": "chat.completion",
+  "model": "muse-wonder-1.0",
+  "usage": {
+    "completion_tokens": 540,
+    "prompt_tokens": 423,
+    "total_tokens": 963,
+    "completion_tokens_details": {
+      "reasoning_tokens": 287
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"compilation_source\": \"muse\", \"conditions\": [], \"constraints\": [], \"events\": [{\"id\": \"event1\", \"instruction\": \"Move the purple block into the visible image region target.\", \"observability\": \"SUPPORTED\", \"predicate\": {\"object_id\": \"object1\", \"region_id\": \"region1\", \"type\": \"object_entered_region\"}, \"reason\": null, \"required\": true, \"source\": {\"quote\": \"Move the purple block into the visible image region target.\", \"source_id\": \"clause1\"}}], \"objects\": [{\"description\": \"The procedure's purple block.\", \"grounding_prompt\": \"Identify the purple block.\", \"id\": \"object1\", \"label\": \"purple block\"}], \"procedure\": \"Move the purple block into the visible image region target.\", \"regions\": [{\"coordinate_semantics\": \"visible_image_region\", \"description\": \"Visible image region for target; a transition does not prove physical containment.\", \"grounding_prompt\": \"Locate the visible image region for target.\", \"id\": \"region1\", \"observability\": \"SUPPORTED\", \"reason\": null}], \"version\":   \"2.0\"}"
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-01a1809d-a095-7568-bf51-c85fbaf3dee4",
+  "object": "chat.completion",
+  "model": "muse-wonder-1.0",
+  "usage": {
+    "completion_tokens": 345,
+    "prompt_tokens": 364,
+    "total_tokens": 709,
+    "completion_tokens_details": {
+      "reasoning_tokens": 165
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"compilation_source\": \"muse\", \"conditions\": [{\"id\": \"condition1\", \"instruction\": \"At end, the green box is visible.\", \"observability\": \"SUPPORTED\", \"predicate\": {\"object_id\": \"object1\", \"type\": \"object_visible\"}, \"reason\": null, \"required\": true, \"scope\": \"final\", \"source\": {\"quote\": \"At end, the green box is visible.\", \"source_id\": \"clause1\"}}], \"constraints\": [], \"events\": [], \"objects\": [{\"description\": \"The procedure's green box.\", \"grounding_prompt\": \"Identify the green box.\", \"id\": \"object1\", \"label\": \"green box\"}], \"procedure\": \"At end, the green box is visible.\", \"regions\": [], \"version\": \"2.0\"}"
+      }
+    }
+  ]
+}

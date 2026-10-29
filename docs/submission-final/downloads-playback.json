@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-29",
+  "source": "Exact Downloads files served through a loopback-only static server",
+  "clips": [
+    {
+      "case": "correct",
+      "duration": 15,
+      "error": null,
+      "height": 720,
+      "paused": false,
+      "readyState": 2,
+      "time": 2.882,
+      "width": 1280
+    },
+    {
+      "case": "reverse",
+      "duration": 15,
+      "error": null,
+      "height": 720,
+      "paused": true,
+      "readyState": 4,
+      "time": 15,
+      "width": 1280
+    },
+    {
+      "case": "occlusion",
+      "duration": 15,
+      "error": null,
+      "height": 720,
+      "paused": false,
+      "readyState": 2,
+      "time": 5.9242,
+      "width": 1280
+    }
+  ],
+  "demo": {
+    "duration_s": 145.621,
+    "width": 1920,
+    "height": 1080,
+    "observed_time_s": 145.621,
+    "error": null
+  }
+}

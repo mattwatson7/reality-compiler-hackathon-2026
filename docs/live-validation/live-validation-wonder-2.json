@@ -1,0 +1,127 @@
+{
+  "started_at": "2026-10-27T18:24:41.382829+00:00",
+  "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+  "graph": {
+    "version": "2.0",
+    "procedure": "Move the blue block into the visible marked region before moving the cup into that region.",
+    "compilation_source": "muse",
+    "objects": [
+      {
+        "id": "object1",
+        "label": "blue block",
+        "description": "The procedure's blue block.",
+        "grounding_prompt": "Identify the blue block."
+      },
+      {
+        "id": "object2",
+        "label": "cup",
+        "description": "The procedure's cup.",
+        "grounding_prompt": "Identify the cup."
+      }
+    ],
+    "regions": [
+      {
+        "observability": "SUPPORTED",
+        "reason": null,
+        "id": "region1",
+        "description": "Visible image region for marked; a transition does not prove physical containment.",
+        "grounding_prompt": "Locate the visible image region for marked.",
+        "coordinate_semantics": "visible_image_region"
+      }
+    ],
+    "events": [
+      {
+        "observability": "SUPPORTED",
+        "reason": null,
+        "id": "event1",
+        "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+        "source": {
+          "start": 0,
+          "end": 90,
+          "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+        },
+        "predicate": {
+          "type": "object_entered_region",
+          "object_id": "object1",
+          "region_id": "region1"
+        },
+        "required": true
+      },
+      {
+        "observability": "SUPPORTED",
+        "reason": null,
+        "id": "event2",
+        "instruction": "Move the blue block into the visible marked region before moving the cup into that region.",
+        "source": {
+          "start": 0,
+          "end": 90,
+          "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+        },
+        "predicate": {
+          "type": "object_entered_region",
+          "object_id": "object2",
+          "region_id": "region1"
+        },
+        "required": true
+      }
+    ],
+    "constraints": [
+      {
+        "id": "constraint1",
+        "operator": "BEFORE",
+        "first": "event1",
+        "second": "event2",
+        "source": {
+          "start": 0,
+          "end": 90,
+          "quote": "Move the blue block into the visible marked region before moving the cup into that region."
+        }
+      }
+    ],
+    "conditions": []
+  },
+  "status": "accepted",
+  "responses": [
+    {
+      "id": "chatcmpl-01a17e9b-8bf2-73c2-be81-c6f092995f4a",
+      "object": "chat.completion",
+      "model": "muse-wonder-1.0",
+      "usage": {
+        "completion_tokens": 720,
+        "prompt_tokens": 386,
+        "total_tokens": 1106,
+        "completion_tokens_details": {
+          "reasoning_tokens": 249
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "response_fields": [
+        "choices",
+        "created",
+        "id",
+        "model",
+        "object",
+        "usage"
+      ],
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop",
+          "message": {
+            "role": "assistant",
+            "content": "{\"compilation_source\": \"muse\", \"conditions\": [], \"constraints\": [{\"first\": \"event1\", \"id\": \"constraint1\", \"operator\": \"BEFORE\", \"second\": \"event2\", \"source\": {\"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"source_id\": \"clause1\"}}], \"events\": [{\"id\": \"event1\", \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"observability\": \"SUPPORTED\", \"predicate\": {\"object_id\": \"object1\", \"region_id\": \"region1\", \"type\": \"object_entered_region\"}, \"reason\": null, \"required\": true, \"source\": {\"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"source_id\": \"clause1\"}}, {\"id\": \"event2\", \"instruction\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"observability\": \"SUPPORTED\", \"predicate\": {\"object_id\": \"object2\", \"region_id\": \"region1\", \"type\": \"object_entered_region\"}, \"reason\": null, \"required\": true, \"source\": {\"quote\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"source_id\": \"clause1\"}}], \"objects\": [{\"description\": \"The procedure's blue block.\", \"grounding_prompt\": \"Identify the blue block.\", \"id\": \"object1\", \"label\": \"blue block\"}, {\"description\": \"The procedure's cup.\", \"grounding_prompt\": \"Identify the cup.\", \"id\": \"object2\", \"label\": \"cup\"}], \"procedure\": \"Move the blue block into the visible marked region before moving the cup into that region.\", \"regions\": [{\"coordinate_semantics\": \"visible_image_region\", \"description\": \"Visible image region for marked; a transition does not prove physical containment.\", \"grounding_prompt\": \"Locate the visible image region for marked.\", \"id\": \"region1\", \"observability\": \"SUPPORTED\", \"reason\": null}], \"version\":  \"2.0\"}"
+          }
+        }
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "model": "muse-wonder-1.0",
+      "usage_verified": true
+    }
+  ],
+  "finished_at": "2026-10-27T18:24:45.655002+00:00"
+}

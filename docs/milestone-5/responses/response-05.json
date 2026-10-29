@@ -1,0 +1,26 @@
+{
+  "id": "chatcmpl-01a1809b-5038-73a7-8d2e-bc89e05dee15",
+  "object": "chat.completion",
+  "model": "muse-spark-1.3",
+  "usage": {
+    "completion_tokens": 532,
+    "prompt_tokens": 9248,
+    "total_tokens": 9780,
+    "completion_tokens_details": {
+      "reasoning_tokens": 434
+    },
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "stop",
+      "message": {
+        "role": "assistant",
+        "content": "{\"observations\": [{\"confidence\": 0.97, \"description\": \"Green hollow box visible on table center in all final frames 140-145.\", \"event_id\": \"condition1\", \"frame_indices\": [140, 141, 142, 143, 144, 145], \"polarity\": \"CONFIRMED\", \"predicate\": {\"object_id\": \"object1\", \"type\": \"object_visible\"}}]}"
+      }
+    }
+  ]
+}

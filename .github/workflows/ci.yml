@@ -1,0 +1,41 @@
+name: milestone-checks
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.13.1'
+          python-version: '3.12'
+      - run: uv sync --frozen --group dev
+      - run: uv run pytest --basetemp .pytest-tmp -q
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy
+      - run: uv run python -m scripts.replay_milestone5
+      - run: npm --prefix frontend ci
+      - run: npm --prefix frontend test
+      - run: npm --prefix frontend run lint
+      - run: npm --prefix frontend run typecheck
+      - run: npm --prefix frontend run build
+      - run: npm --prefix frontend audit --audit-level=moderate
+      - run: docker build -t reality-compiler:ci .
+      - name: Run container integration smoke with paid inference disabled
+        run: |
+          docker run -d --name reality-compiler-ci -p 127.0.0.1:8000:8000 \
+            -e CI=true -e PROVIDER_MODE=fixture -e META_COMPILER=local_rules \
+            -e META_ENABLE_PAID_INFERENCE=false -e META_SMOKE_TEST_APPROVED=false \
+            -e META_SPARK_VISUAL=false reality-compiler:ci
+          python scripts/docker_smoke.py
+      - name: Container diagnostics and cleanup
+        if: always()
+        run: |
+          docker logs reality-compiler-ci || true
+          docker rm -f reality-compiler-ci || true

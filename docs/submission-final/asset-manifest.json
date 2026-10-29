@@ -1,0 +1,205 @@
+{
+  "date": "2026-10-28",
+  "generated_only_public_pixels": true,
+  "private_camera_pixels_included": false,
+  "new_paid_inference": false,
+  "assets": [
+    {
+      "path": "docs/submission-final/captions.srt",
+      "bytes": 3500,
+      "sha256": "80e7562b3e0eaeeae978b3348349576e3222e5725e1684e46c6adfb84d79a607",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/reality-compiler-demo.mp4",
+      "bytes": 9419425,
+      "sha256": "d83ed0ade7c63427dff898d297a5e86465d8265ce0c2a8c8b75ac8e139a69e5b",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/closing.jpg",
+      "bytes": 238277,
+      "sha256": "b05a744bb34096a5b3fb958652bee6e5300239a4a52c7ee875aa14654b875ddb",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/comparison.jpg",
+      "bytes": 214396,
+      "sha256": "4c8257224636f1eae9943044e40c7976c7367ef82404e23069ac099174fbfae8",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/evidence.jpg",
+      "bytes": 120955,
+      "sha256": "5aa4e09b4715eac6332f35acbcf0f556c07e42cd93b56807f6ab36ff84066916",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/mobile-comparison.jpg",
+      "bytes": 78440,
+      "sha256": "99a028bdda009d52df4d50544ad5245523d33edb69ead0bcacdf4c37528d5ba3",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/new-local-cv-selection.jpg",
+      "bytes": 79505,
+      "sha256": "dab6f282a79ef62b79fe00aef90808b3b9179d0fad1993e19b872d1d3d42bfd9",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/opening.jpg",
+      "bytes": 123198,
+      "sha256": "bd59cbf74d55331c2bca64f589edba97b38eac0d548ea21ce553989ca303a7b2",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/program.jpg",
+      "bytes": 94299,
+      "sha256": "d89dca4e6679d3cc951c6a76bb998c6d46b09cfb366a186d9715f13e0fa5cd1b",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/provenance.jpg",
+      "bytes": 238277,
+      "sha256": "b05a744bb34096a5b3fb958652bee6e5300239a4a52c7ee875aa14654b875ddb",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/reverse.jpg",
+      "bytes": 120246,
+      "sha256": "9e747c2c5b56abc6fae565d1432d252057e089b32c7be4d6d9b6aab599742fc6",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/selection.jpg",
+      "bytes": 129088,
+      "sha256": "69f8e626b20294e0018dc8b8301d4c1890d116019e8fb93e1f1c6100d3715579",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/source.jpg",
+      "bytes": 102540,
+      "sha256": "da091cf286beeae76346972f8a3ade118658fe0d40ed7711cef3dd3ec7f9904f",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/tracking.jpg",
+      "bytes": 134216,
+      "sha256": "6d548fa991030e7d3e47eaba70a217b3413cf2bbc6aa3121358ceef6e62734b8",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/submission-final/screenshots/unknown.jpg",
+      "bytes": 238277,
+      "sha256": "b05a744bb34096a5b3fb958652bee6e5300239a4a52c7ee875aa14654b875ddb",
+      "kind": "generated-input application capture or editorial captions",
+      "publication_status": "prepared for human approval; no external media upload"
+    },
+    {
+      "path": "docs/milestone-5/browser-selection.jpg",
+      "bytes": 114035,
+      "sha256": "7fbebee649c2152816c09f6244f59883930e3fb3cf98905501a000cb533e80be",
+      "kind": "historical generated-input application selection still",
+      "used_in": "selection chapter; explicitly labeled historical still"
+    },
+    {
+      "path": "docs/submission-final/downloads-playback.json",
+      "bytes": 824,
+      "sha256": "84a68c5b9af0f7c0306c13993c397a3468f7b56143c9e2535fc06f9d2a4f0f81",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-browser-dom.txt",
+      "bytes": 14404,
+      "sha256": "7572997898333f9f1a525beb9561def0a5db7b695b9e344aaf861d493ef1cf1c",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-delivery-manifest.json",
+      "bytes": 1096,
+      "sha256": "57fa6f8e9f16f143ecbb60f05bc264af6e4c29d8bf28ab9da534c52552419177",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/correct-source.jpg",
+      "bytes": 491863,
+      "sha256": "45eaef281390b9c311bac1a304922ff13a7fdb43a1d02bd2b3711f6de5c60451",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/correct-unknown.jpg",
+      "bytes": 122482,
+      "sha256": "7961bbbe51c255c27a2ac021acd4130aa26bf773e314ada3b7e0148a517a7a95",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/occlusion-boundary.jpg",
+      "bytes": 98244,
+      "sha256": "a21975928bbd50004c9e41cd9f2c55b4c248720944fd473623028ecc003e378e",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/occlusion-comparison.jpg",
+      "bytes": 122904,
+      "sha256": "c2ccc2367117997af4f0bbb355bd7e3b2a3441357055327b51e0fefb35874e3e",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/occlusion-source.jpg",
+      "bytes": 110575,
+      "sha256": "1a687372176375e8fc3c1ba3e35435b8e31d30d880852a387df6078523357623",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/reverse-comparison.jpg",
+      "bytes": 118709,
+      "sha256": "de7ccd7da1bcdec4b6b746bed595e78b344db66b99bbf3e45a1e01b454262a70",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/reverse-later-entry.jpg",
+      "bytes": 100616,
+      "sha256": "888352d6e756abb0d753dbb2542ac7da4e919156105047867aff22f1fc5feffe",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-screenshots/reverse-source.jpg",
+      "bytes": 101081,
+      "sha256": "42c8f2eb684e8bc67d77b86583f569233cdac0b26c3b8fb522c28be1becf8537",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    },
+    {
+      "path": "docs/submission-final/synthetic-validation.json",
+      "bytes": 75051,
+      "sha256": "649ef14c15154dbc24bbc903220f92130be681119ec3fccd3183bac9395c875c",
+      "kind": "project-generated local-CV application inspection / audit; no Meta inference",
+      "publication_status": "local, pending approval"
+    }
+  ],
+  "readiness_supplement_date": "2026-10-29"
+}

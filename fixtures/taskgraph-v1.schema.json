@@ -1,0 +1,132 @@
+{
+  "$defs": {
+    "OrderingConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "before": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Before",
+          "type": "string"
+        },
+        "after": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "After",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "before",
+        "after"
+      ],
+      "title": "OrderingConstraint",
+      "type": "object"
+    },
+    "PhysicalObject": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "label"
+      ],
+      "title": "PhysicalObject",
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "instruction": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Instruction",
+          "type": "string"
+        },
+        "object_ids": {
+          "items": {
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+            "type": "string"
+          },
+          "maxItems": 30,
+          "title": "Object Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "id",
+        "instruction"
+      ],
+      "title": "Step",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Version",
+      "type": "string"
+    },
+    "procedure": {
+      "maxLength": 10000,
+      "minLength": 1,
+      "title": "Procedure",
+      "type": "string"
+    },
+    "objects": {
+      "items": {
+        "$ref": "#/$defs/PhysicalObject"
+      },
+      "maxItems": 30,
+      "title": "Objects",
+      "type": "array"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/Step"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Steps",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/OrderingConstraint"
+      },
+      "maxItems": 100,
+      "title": "Constraints",
+      "type": "array"
+    }
+  },
+  "required": [
+    "procedure",
+    "objects",
+    "steps",
+    "constraints"
+  ],
+  "title": "TaskGraph",
+  "type": "object"
+}

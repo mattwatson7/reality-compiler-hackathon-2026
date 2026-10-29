@@ -1,0 +1,14 @@
+SYNTHETIC VIDEOS - NOT PHYSICAL CAMERA RECORDINGS
+
+Each MP4: 15 seconds, 1280x720, 30 fps, H.264, silent.
+Upload using Local OpenCV and Generated demonstration, with the manifest procedure.
+Select the blue block, yellow cup and marked region in frame zero.
+correct.mp4: expected PASS; reverse.mp4: observed cup-first order supports FAIL.
+occlusion.mp4: expected UNKNOWN; lost identity and coarse scene-motion guard invalidate decisive events.
+The coarse guard cannot distinguish an occluder from camera motion and does not verify camera immobility.
+Local OpenCV is not SAM. Synthetic success does not establish physical-camera acceptance.
+
+Frame-zero normalized boxes (x,y,width,height):
+block (175/1280,203/720,122/1280,108/720)
+cup (172/1280,455/720,122/1280,105/720)
+region (704/1280,180/720,448/1280,360/720)

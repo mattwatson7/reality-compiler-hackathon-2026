@@ -1,0 +1,527 @@
+{
+  "$defs": {
+    "Condition": {
+      "additionalProperties": false,
+      "properties": {
+        "observability": {
+          "default": "SUPPORTED",
+          "enum": [
+            "SUPPORTED",
+            "AMBIGUOUS",
+            "UNSUPPORTED"
+          ],
+          "title": "Observability",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "instruction": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Instruction",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceSpan"
+        },
+        "predicate": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "object_entered_region": "#/$defs/RegionTransition",
+                  "object_exited_region": "#/$defs/RegionTransition",
+                  "object_visible": "#/$defs/ObjectVisible",
+                  "visually_confirmed_state_change": "#/$defs/StateChange"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/ObjectVisible"
+                },
+                {
+                  "$ref": "#/$defs/RegionTransition"
+                },
+                {
+                  "$ref": "#/$defs/StateChange"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Predicate"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        },
+        "scope": {
+          "default": "during",
+          "enum": [
+            "during",
+            "final"
+          ],
+          "title": "Scope",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "instruction",
+        "source",
+        "predicate"
+      ],
+      "title": "Condition",
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "observability": {
+          "default": "SUPPORTED",
+          "enum": [
+            "SUPPORTED",
+            "AMBIGUOUS",
+            "UNSUPPORTED"
+          ],
+          "title": "Observability",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "instruction": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Instruction",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceSpan"
+        },
+        "predicate": {
+          "anyOf": [
+            {
+              "discriminator": {
+                "mapping": {
+                  "object_entered_region": "#/$defs/RegionTransition",
+                  "object_exited_region": "#/$defs/RegionTransition",
+                  "object_visible": "#/$defs/ObjectVisible",
+                  "visually_confirmed_state_change": "#/$defs/StateChange"
+                },
+                "propertyName": "type"
+              },
+              "oneOf": [
+                {
+                  "$ref": "#/$defs/ObjectVisible"
+                },
+                {
+                  "$ref": "#/$defs/RegionTransition"
+                },
+                {
+                  "$ref": "#/$defs/StateChange"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Predicate"
+        },
+        "required": {
+          "default": true,
+          "title": "Required",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "instruction",
+        "source",
+        "predicate"
+      ],
+      "title": "Event",
+      "type": "object"
+    },
+    "ObjectVisible": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "object_visible",
+          "title": "Type",
+          "type": "string"
+        },
+        "object_id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Object Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "object_id"
+      ],
+      "title": "ObjectVisible",
+      "type": "object"
+    },
+    "PhysicalObject": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "label": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "grounding_prompt": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Grounding Prompt"
+        }
+      },
+      "required": [
+        "id",
+        "label",
+        "description"
+      ],
+      "title": "PhysicalObject",
+      "type": "object"
+    },
+    "Region": {
+      "additionalProperties": false,
+      "properties": {
+        "observability": {
+          "default": "SUPPORTED",
+          "enum": [
+            "SUPPORTED",
+            "AMBIGUOUS",
+            "UNSUPPORTED"
+          ],
+          "title": "Observability",
+          "type": "string"
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "maxLength": 2000,
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reason"
+        },
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "grounding_prompt": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Grounding Prompt",
+          "type": "string"
+        },
+        "coordinate_semantics": {
+          "const": "visible_image_region",
+          "default": "visible_image_region",
+          "title": "Coordinate Semantics",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "description",
+        "grounding_prompt"
+      ],
+      "title": "Region",
+      "type": "object"
+    },
+    "RegionTransition": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "object_entered_region",
+            "object_exited_region"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "object_id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "region_id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Region Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "object_id",
+        "region_id"
+      ],
+      "title": "RegionTransition",
+      "type": "object"
+    },
+    "SourceSpan": {
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "SourceSpan",
+      "type": "object"
+    },
+    "StateChange": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "const": "visually_confirmed_state_change",
+          "title": "Type",
+          "type": "string"
+        },
+        "object_id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Object Id",
+          "type": "string"
+        },
+        "state_dimension": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "State Dimension",
+          "type": "string"
+        },
+        "from_state": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "From State",
+          "type": "string"
+        },
+        "to_state": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "To State",
+          "type": "string"
+        },
+        "visual_criteria": {
+          "maxLength": 2000,
+          "minLength": 1,
+          "title": "Visual Criteria",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "object_id",
+        "state_dimension",
+        "from_state",
+        "to_state",
+        "visual_criteria"
+      ],
+      "title": "StateChange",
+      "type": "object"
+    },
+    "TemporalConstraint": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Id",
+          "type": "string"
+        },
+        "operator": {
+          "enum": [
+            "BEFORE",
+            "AFTER"
+          ],
+          "title": "Operator",
+          "type": "string"
+        },
+        "first": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "First",
+          "type": "string"
+        },
+        "second": {
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,63}$",
+          "title": "Second",
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/SourceSpan"
+        }
+      },
+      "required": [
+        "id",
+        "operator",
+        "first",
+        "second",
+        "source"
+      ],
+      "title": "TemporalConstraint",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": "2.0",
+      "title": "Version",
+      "type": "string"
+    },
+    "procedure": {
+      "maxLength": 10000,
+      "minLength": 1,
+      "title": "Procedure",
+      "type": "string"
+    },
+    "compilation_source": {
+      "enum": [
+        "fixture",
+        "local_rules",
+        "muse",
+        "legacy"
+      ],
+      "title": "Compilation Source",
+      "type": "string"
+    },
+    "objects": {
+      "items": {
+        "$ref": "#/$defs/PhysicalObject"
+      },
+      "maxItems": 30,
+      "title": "Objects",
+      "type": "array"
+    },
+    "regions": {
+      "items": {
+        "$ref": "#/$defs/Region"
+      },
+      "maxItems": 30,
+      "title": "Regions",
+      "type": "array"
+    },
+    "events": {
+      "items": {
+        "$ref": "#/$defs/Event"
+      },
+      "maxItems": 60,
+      "title": "Events",
+      "type": "array"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "#/$defs/TemporalConstraint"
+      },
+      "maxItems": 100,
+      "title": "Constraints",
+      "type": "array"
+    },
+    "conditions": {
+      "items": {
+        "$ref": "#/$defs/Condition"
+      },
+      "maxItems": 60,
+      "title": "Conditions",
+      "type": "array"
+    }
+  },
+  "required": [
+    "version",
+    "procedure",
+    "compilation_source",
+    "objects"
+  ],
+  "title": "TaskGraph",
+  "type": "object"
+}

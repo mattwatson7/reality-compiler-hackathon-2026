@@ -1,0 +1,174 @@
+{
+  "id": "correct",
+  "title": "Correct sequence",
+  "description": "Synthetic block, cup and card animation with declared events.",
+  "video": "correct.mp4",
+  "graph": {
+    "version": "1.0",
+    "procedure": "1. Move the blue block onto the mat.\n2. Place the cup on the mat.\n3. Raise the green card.",
+    "objects": [
+      {
+        "id": "block",
+        "label": "block"
+      },
+      {
+        "id": "cup",
+        "label": "cup"
+      },
+      {
+        "id": "card",
+        "label": "card"
+      }
+    ],
+    "steps": [
+      {
+        "id": "s1",
+        "instruction": "Move blue block onto mat",
+        "object_ids": [
+          "block"
+        ]
+      },
+      {
+        "id": "s2",
+        "instruction": "Place cup on mat",
+        "object_ids": [
+          "cup"
+        ]
+      },
+      {
+        "id": "s3",
+        "instruction": "Raise green card",
+        "object_ids": [
+          "card"
+        ]
+      }
+    ],
+    "constraints": [
+      {
+        "id": "c1",
+        "before": "s1",
+        "after": "s2"
+      },
+      {
+        "id": "c2",
+        "before": "s2",
+        "after": "s3"
+      }
+    ]
+  },
+  "observations": [
+    {
+      "step_id": "s1",
+      "start_s": 1.0,
+      "end_s": 1.8,
+      "confidence": 1.0,
+      "evidence": {
+        "id": "e1",
+        "start_s": 1.0,
+        "end_s": 1.8,
+        "source": "fixture",
+        "description": "Synthetic animation: Move blue block onto mat"
+      }
+    },
+    {
+      "step_id": "s2",
+      "start_s": 3.0,
+      "end_s": 3.8,
+      "confidence": 1.0,
+      "evidence": {
+        "id": "e2",
+        "start_s": 3.0,
+        "end_s": 3.8,
+        "source": "fixture",
+        "description": "Synthetic animation: Place cup on mat"
+      }
+    },
+    {
+      "step_id": "s3",
+      "start_s": 5.0,
+      "end_s": 5.8,
+      "confidence": 1.0,
+      "evidence": {
+        "id": "e3",
+        "start_s": 5.0,
+        "end_s": 5.8,
+        "source": "fixture",
+        "description": "Synthetic animation: Raise green card"
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "object_id": "block",
+      "source": "fixture",
+      "samples": [
+        {
+          "time_s": 1.0,
+          "box": [
+            0.08854166666666667,
+            0.5462962962962963,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        },
+        {
+          "time_s": 1.8,
+          "box": [
+            0.3802083333333333,
+            0.5462962962962963,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "object_id": "cup",
+      "source": "fixture",
+      "samples": [
+        {
+          "time_s": 3.0,
+          "box": [
+            0.5364583333333334,
+            0.21296296296296297,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        },
+        {
+          "time_s": 3.8,
+          "box": [
+            0.5364583333333334,
+            0.5462962962962963,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "object_id": "card",
+      "source": "fixture",
+      "samples": [
+        {
+          "time_s": 5.0,
+          "box": [
+            0.796875,
+            0.6574074074074074,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        },
+        {
+          "time_s": 5.8,
+          "box": [
+            0.796875,
+            0.21296296296296297,
+            0.07291666666666667,
+            0.16666666666666666
+          ]
+        }
+      ]
+    }
+  ]
+}

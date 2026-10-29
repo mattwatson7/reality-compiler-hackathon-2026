@@ -1,0 +1,157 @@
+# Milestone 4.1: semantic grounding and independent SAM preparation
+
+Implemented on the existing Milestone 4 branch for PR #3. **No new paid inference
+requests were made.** Both persistent paid flags and Spark remain false. The
+retired Wonder/SAM authorization was not reused and the lifetime ledger was not
+reset, settled, or otherwise changed by offline preparation.
+
+## Semantic architecture
+
+`backend/app/grounding.py` creates an ordered source catalog from the original
+procedure with deterministic Unicode offsets and stable `clauseN` identifiers.
+Sentence/list/semicolon boundaries use the existing bounded parser; compound
+instructions retain their full clause so qualifiers and explicit relations cannot
+be lost through a model-selected substring. Repeated quotations have distinct IDs
+and positions. IDs are stable for the exact input, not across edits to the input.
+
+Wonder's application-owned structured-output contract now uses only `source_id`
+and exact `quote`, never start/end offsets. It receives exact source text and
+application-controlled object/region declarations. Application code resolves each
+reference to the stored span, checks strict TaskGraph v2, then compares every
+semantic field against an independent controlled-language compilation. Only free
+explanatory reasons may differ; they cannot confer observability or evidence.
+Canonical IDs, declarations and source encounter order are deliberately strict.
+A semantically equivalent differently named graph can be rejected; no model
+output is silently renamed, repaired, downgraded, or replaced with a local graph.
+
+Acceptance checks full typed predicates and arguments, source occurrence,
+object/region identity, observability, required/optional status, condition scope,
+event multiplicity and explicit temporal edges. Unknown prose/qualifiers and
+ambiguous pronouns remain explicit unsupported requirements. Unsupported clauses
+cannot be promoted by model confidence. Diagnostics identify section, item index,
+field and expected source offsets without echoing remote content or credentials.
+Duplicate JSON fields are rejected before they can overwrite contradictory values.
+Failures do not retry or acknowledge/settle a response.
+
+This is a **bounded semantic acceptance contract**, not a general-purpose proof
+of arbitrary natural-language equivalence. Wonder cannot extend the accepted
+observable grammar by itself. The independent grammar remains the authority and
+must be extended and tested explicitly when adding language support. The offline
+Muse fixture seam retains its legacy contract and has no real network transport.
+OpenCV, fixture providers and the deterministic evaluator are unchanged.
+
+## Recorded failure and adversarial coverage
+
+The actual sanitized failed Wonder envelope in `meta-smoke-wonder-response.json`
+is replayed offline and rejected with no retry or settlement. A second regression
+corrects only its offsets *inside the test*, proves that structural TaskGraph
+validation alone then accepts it, and proves the independent semantic gate still
+rejects it. No repaired recording is presented as a successful live response.
+
+Additional tests cover wrong offsets, exact quotations assigned to the wrong
+occurrence, fabricated/missing source IDs, fabricated requirements, observable
+geometry incorrectly marked unsupported, hidden properties promoted to observable
+predicates, duplicate events, extra persistence/final conditions, omitted/reversed
+or adjacency-invented temporal constraints, ambiguous pronouns, optionality and
+changed/omitted qualifiers, contradictory JSON keys, and secret-safe diagnostics.
+
+## Reviewed SAM-only plan (authorization pending)
+
+The checked-in `sam-smoke-taskgraph.json` is a local compilation, reviewed against
+the exact procedure: two required visible region-entry events, blue block before
+cup, one explicit BEFORE edge, no persistence/final conditions or hidden property.
+It describes visible geometry only. It does not establish physical containment.
+This implementation review is separate from the human authorization still needed
+for dispatch and approval of these exact artifacts.
+
+`sam-smoke-selections.json` binds immutable frame zero and compiled IDs.
+Frame zero was decoded and visually inspected during preparation. Actual pixel
+boxes use half-open bounds (SAM receives inclusive x2/y2 one pixel lower):
+
+| Selection | Pixel rectangle (x1,y1,x2,y2) |
+|---|---|
+| object1: blue block | (24,39,52,67) |
+| object2: synthetic green cup shape | (74,108,108,142) |
+| region1: marked visible region | (170,15,310,165) |
+
+The exact existing synthetic MP4 is 320×180, 24 fps, 72 decoded frames, 3 seconds.
+Its SHA-256 is `9965b7db70deab5ea5b64d1f3adfa0278f6dd95d48bb169c9058e2258b427401`.
+It remains private under ignored `data/meta-smoke-2026-10-27-one-wonder-one-sam/`.
+A checkout without that exact video fails offline preflight; no alternate media
+or regenerated bytes are substituted. This synthetic clip cannot validate camera
+recordings or real-world reliability.
+
+`python -m scripts.meta_sam_smoke` performs only offline preflight. It needs no key,
+model catalog request or budget mutation. The live switch additionally requires
+`APPROVED_PLAN_SHA256` to match the reviewed plan, currently **None**. The fixed
+plan digest is `001885ac8f3b42dc2e358521d14c30509d4af4331e3cb1c48802656b50e746e4`.
+Only a later explicit human authorization can justify recording that digest.
+
+The runner uses the existing local lifetime ledger, consumes a separate durable
+claim before catalog/inference, checks fresh SAM entitlement after authorization,
+and permits at most one SAM inference attempt. No Wonder, Spark, retry or automatic
+recovery exists. It copies and hashes the exact media before dispatch; initialization
+is revalidated against the copy's immutable frame reference. Persistent gates must
+stay false; only this isolated client would be enabled temporarily after approval,
+with final disablement and sanitized local evidence even on failure.
+
+The shared transport decodes the **submitted base64 bytes**, validates normalized
+media, frame-zero box prompts, exact dimensions and forward-only range before
+reserving cost. Caller-supplied small bounds cannot under-reserve. The parser
+validates explicit frame/object IDs, mask grammar/codec, geometry, confidence,
+continuity and identity. The harness requires both complete, reliable 72-frame
+tracks before acknowledging validated success. Missing, overlapping or uncertain
+masks, timeouts and failures retain the full reservation. Missing/inconsistent or
+excess usage also retains it, including a lower billed-frame count inconsistent
+with the verified full forward range. Reports distinguish returned billed-frame usage,
+published-rate estimated charge, ledger settlement and unverified billing invoice.
+No PASS/FAIL/UNKNOWN procedure evaluation is claimed by this SAM-only test.
+
+## Exact requested authorization
+
+Authorize **one** `sam-3.1` POST to `/v1/responses`, on the exact artifacts above,
+frame-zero box prompts for both objects, forward tracking, one-bit masks and
+confidence, nonstreaming, no tools, no retries, no Wonder and no Spark.
+Maximum reservation: **14,400 micro-USD = [private historical cost]**.
+
+Official Meta pricing and segmentation documents were re-read on **2026-10-28**:
+[pricing and billed-frame usage](https://dev.meta.ai/docs/pricing-rate-limits),
+[forward tracking and nonstreaming](https://dev.meta.ai/docs/sam/segmenting), and
+[frame IDs and mask grammar](https://dev.meta.ai/docs/sam/reading-segmentation).
+Forward frame-zero tracking covers 72 source frames once; the per-request minimum
+is 50 billed frames. At [private historical cost]/1000 video frames, `max(50,72) × 200 = 14,400`
+micro-USD. Multiple prompted objects do not add a separate per-object billing unit.
+The prior 720-frame ceiling of [private historical cost] is unnecessary for these verified bytes.
+Recheck the contract/prices before an authorized future execution; changed terms
+or artifacts require a new bound and review. Authentication is server-only bearer
+`MODEL_API_KEY`; the existing catalog record shows SAM availability, but no fresh
+Meta authentication/catalog request was made during this offline implementation.
+No SAM live compatibility or success is established yet.
+
+## Validation and integrations
+
+Local validation completed:
+
+- `uv run pytest --basetemp .pytest-tmp -q`: **293 passed**, one existing
+  Starlette/httpx deprecation warning.
+- `uv run ruff check .`, `uv run ruff format --check .`, `uv run mypy`: passed.
+- `npm --prefix frontend test`: **16 passed**.
+- Frontend lint, typecheck and production build: passed.
+- `npm --prefix frontend audit --audit-level=moderate`: **0 vulnerabilities**.
+- Exact configured-credential scan of candidate files: passed without displaying
+  credentials; `git diff --check`: passed.
+- Offline pinned preflight: passed; paid flags and Spark false; existing ledger
+  exposure remains **4,276,224 micro-USD**, new SAM authorization unclaimed.
+- Independent read-only review and final accounting/pin recheck: no remaining
+  actionable findings.
+- Local Docker engine unavailable (Docker Desktop Linux named pipe absent).
+  Hosted CI verifies Docker and the same checks on the pushed revision; see
+  [PR #3 checks](https://github.com/mattwatson7/reality-compiler/pull/3/checks).
+
+No dependencies were installed or persistent configuration changed. Repository
+Git attributes enforce LF only for the three byte-pinned SAM JSON artifacts.
+External integrations: authenticated GitHub for PR #3 metadata and CI; current
+official Meta documentation through web access. No Meta inference connector is
+available, and no inference API was called. Local Docker Desktop engine availability
+is checked separately; hosted CI includes the Docker build and dependency audit.
+Neither PR #2 nor PR #3 is merged.

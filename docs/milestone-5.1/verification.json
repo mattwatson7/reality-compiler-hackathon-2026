@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-28",
+  "base_commit": "17e2b4f4d4c69159d578bea6f3317781b42e918f",
+  "backend": {
+    "command": "uv run pytest --basetemp .pytest-tmp -q",
+    "passed": 357,
+    "failed": 0,
+    "seconds": 467.52,
+    "warnings": [
+      "Existing Starlette/httpx TestClient deprecation warning"
+    ]
+  },
+  "checks": {
+    "uv run ruff check .": "PASS",
+    "uv run ruff format --check .": "PASS (90 files)",
+    "uv run mypy": "PASS (33 source files)",
+    "uv lock --check": "PASS",
+    "npm --prefix frontend test": "PASS (21 tests)",
+    "npm --prefix frontend run lint": "PASS",
+    "npm --prefix frontend run typecheck": "PASS",
+    "npm --prefix frontend run build": "PASS",
+    "npm --prefix frontend audit --audit-level=moderate": "PASS (0 vulnerabilities)",
+    "git diff --check": "PASS"
+  },
+  "offline_replay": {
+    "command": "uv run python -m scripts.replay_milestone5",
+    "response_hashes_verified": 17,
+    "results_reproduced": true,
+    "network_calls": 0
+  },
+  "container_workflow": {
+    "command": "uv run python -m scripts.docker_smoke --base-url http://127.0.0.1:8001",
+    "local_smoke": "PASS: built frontend, fixture PASS/FAIL, media, revisions/history, unsupported UNKNOWN, actual normalization/source PNG, cost 0",
+    "local_docker": "BLOCKED: Docker Desktop Linux engine pipe absent",
+    "hosted_ci": "Read checks for delivered HEAD; actual Docker build and extended running-container smoke run there",
+    "checks_url": "https://github.com/mattwatson7/reality-compiler/pull/3/checks"
+  },
+  "browser": {
+    "mode": "Actual browser automation",
+    "offline_review_job": "41016eff91ad456da431ceb468d149bd",
+    "new_generated_local_cv_job": "2f5e731c315a4b4195a32260873ea1e5",
+    "independent_revision_results": [
+      "FAIL",
+      "UNKNOWN"
+    ],
+    "original_preserved": "PASS",
+    "history_after_restart": 6,
+    "comparison_seek_s": 2.166666,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "mobile_document_width": 375,
+    "horizontal_overflow": false,
+    "new_local_cv_manual_selection_result": "PASS on generated footage, not physical camera acceptance",
+    "source_inspection": {
+      "normalized_frame": 50,
+      "source_frame": 50,
+      "pts": 25600,
+      "time_base": "1/12288",
+      "original_png_dimensions": [
+        320,
+        180
+      ]
+    },
+    "console_warnings_errors": []
+  },
+  "independent_review": {
+    "status": "Completed; verified issues fixed",
+    "findings_fixed": [
+      "same first video stream for source extraction",
+      "evidence seal checked for completed source inspection",
+      "microsecond rounded frame-boundary tolerance",
+      "private recordings gitignore"
+    ]
+  },
+  "cost": {
+    "new_paid_calls": 0,
+    "configured_paid_gate": false,
+    "configured_smoke_gate": false
+  },
+  "limitations": [
+    "Controlled camera originals absent; no new live camera acceptance",
+    "No continuous demo MP4 produced",
+    "Authenticated participant fields/video constraints unavailable",
+    "Legacy source maps remain unavailable",
+    "OmniReset video redistribution not established"
+  ],
+  "security": {
+    "tracked_files": 269,
+    "tracked_bytes": 7741429,
+    "largest_files": [
+      {
+        "path": "docs/milestone-5/live-results.json",
+        "bytes": 1679685
+      },
+      {
+        "path": "docs/milestone-5.1/browser-pass-fail.jpg",
+        "bytes": 493185
+      },
+      {
+        "path": "docs/milestone-5/generated-comparison.json",
+        "bytes": 368443
+      },
+      {
+        "path": "docs/milestone-5/real-peg-comparison.json",
+        "bytes": 278365
+      },
+      {
+        "path": "uv.lock",
+        "bytes": 227537
+      },
+      {
+        "path": "docs/milestone-5/browser-pass-unknown.jpg",
+        "bytes": 134976
+      },
+      {
+        "path": "docs/milestone-5/browser-pass-fail.jpg",
+        "bytes": 131322
+      },
+      {
+        "path": "frontend/package-lock.json",
+        "bytes": 130306
+      },
+      {
+        "path": "docs/live-validation/browser-pass.png",
+        "bytes": 117972
+      },
+      {
+        "path": "docs/live-validation/browser-evidence-seek.png",
+        "bytes": 114924
+      },
+      {
+        "path": "docs/milestone-5/browser-selection.jpg",
+        "bytes": 114035
+      },
+      {
+        "path": "docs/live-validation/browser-selection.png",
+        "bytes": 112430
+      }
+    ],
+    "credential_suspect_paths": [],
+    "capture_sensitive_header_paths": [],
+    "osv": {
+      "checked": 38,
+      "findings": []
+    },
+    "tracked_local_config": [],
+    "frontend_source_maps": []
+  },
+  "internal_markdown_links": {
+    "checked": 37,
+    "broken": []
+  }
+}

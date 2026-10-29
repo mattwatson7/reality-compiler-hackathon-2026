@@ -1,0 +1,93 @@
+{
+  "case": "color",
+  "synthetic": true,
+  "real_world_validation": "unverified",
+  "started_at": "2026-10-27T18:32:47.541670+00:00",
+  "calls": [
+    {
+      "model": "muse-wonder-1.0",
+      "started_at": "2026-10-27T18:32:49.369568+00:00",
+      "status": "returned",
+      "finished_at": "2026-10-27T18:32:54.625447+00:00",
+      "usage": {
+        "completion_tokens": 732,
+        "prompt_tokens": 324,
+        "total_tokens": 1056,
+        "completion_tokens_details": {
+          "reasoning_tokens": 370
+        },
+        "prompt_tokens_details": {
+          "cached_tokens": 116
+        }
+      }
+    }
+  ],
+  "procedure": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+  "source_sha256": "26eaa4ce9a0564712431d86d15e0810ac90617e6041f25c3be68458b730c3eef",
+  "health": {
+    "status": "ok",
+    "mode": "meta_sam",
+    "live_inference": true,
+    "compiler_source": "muse",
+    "real_muse_compilation": true,
+    "real_video_verification": true,
+    "sam_used": false,
+    "perception_modes": [
+      "fixture",
+      "mock-upload",
+      "local_cv",
+      "meta_sam"
+    ],
+    "local_cv_scope": "Static camera, saturated objects, manual first-frame selection",
+    "meta": {
+      "credential_configured": true,
+      "catalog_authenticated": true,
+      "models": [
+        "muse-wonder-1.0",
+        "sam-3.1",
+        "muse-spark-1.3-contributor",
+        "muse-voice-transcribe-1.0",
+        "muse-spark-1.3",
+        "muse-image-1.0",
+        "muse-spark-1.2-contributor",
+        "muse-spark-1.2",
+        "muse-spark-1.1"
+      ],
+      "paid_inference_enabled": true,
+      "sam_selectable": true,
+      "wonder_selectable": true,
+      "spark_selectable": true,
+      "reason": "Fresh account catalog verified; paid dispatch is enabled"
+    }
+  },
+  "job_id": "9229da3cf7704f45a14875ee74c7ccda",
+  "status": "failed",
+  "finished_at": "2026-10-27T18:32:54.799277+00:00",
+  "job": {
+    "id": "9229da3cf7704f45a14875ee74c7ccda",
+    "status": "failed",
+    "procedure": "At end, the cup visibly changes color from green to red (visual criteria: The cup body is red finally and green initially).",
+    "graph": null,
+    "result": null,
+    "observations": [],
+    "initialization": null,
+    "media_metadata": null,
+    "inference_usage": [
+      {
+        "model": "muse-wonder-1.0",
+        "usage_verified": false
+      }
+    ],
+    "provenance": {},
+    "error": "Muse graph rejected (conditions[0].observability: source_semantics_mismatch; expected source [0:123])",
+    "duration_s": null,
+    "frame_reference": null
+  },
+  "track_review": [],
+  "responses": [
+    {
+      "file": "response-1.json",
+      "sha256": "732a7605add16084d7efc8a7bd585242a2e7b2f6abce267c2071c4338ee2f208"
+    }
+  ]
+}
